@@ -11,7 +11,7 @@ $lime: #96F56D;
 $spinach: #1C301A;
 
 
-$proxima_nova: 'proxima-nova';
+$space_grotesk: 'Space Grotesk';
 
 
 $container-padding-mobile: 20px;
@@ -132,7 +132,7 @@ $xxx-large-screen-min-width: 2500px;
   padding: size(19) size(34.9);
   border-radius: size(8);
   cursor: pointer;
-  font-family: $proxima_nova;
+  font-family: $space_grotesk;
   color: $black-color;
   font-size: size(24);
   font-style: normal;
@@ -175,7 +175,7 @@ $xxx-large-screen-min-width: 2500px;
 
 @mixin star-style {
   color: $white-color;
-  font-family: $proxima_nova;
+  font-family: $space_grotesk;
   font-size: size(16);
   font-style: normal;
   font-weight: 700;

@@ -3,11 +3,20 @@
 // region fonts here
 @font-face {
   font-weight: 400;
-  font-family: 'proxima-nova';
-  //src: url('fonts/proximanova/proximanova_regular.woff2') format('woff2'),
+  font-family: 'Space Grotesk';
+  src: url('fonts/SpaceGrotesk-Regular.woff2') format('woff2');
   //url('fonts/proximanova/proximanova_regular.woff') format('woff');
   font-style: normal;
 }
+
+@font-face {
+  font-weight: 500;
+  font-family: 'Space Grotesk';
+  src: url('fonts/SpaceGrotesk-Medium.woff2') format('woff2');
+  //url('fonts/proximanova/proximanova_regular.woff') format('woff');
+  font-style: normal;
+}
+
 
 
 // endregion
@@ -17,7 +26,7 @@ html {
 }
 
 body {
-  font-family: $proxima_nova !important;
+  font-family: $space_grotesk !important;
   color: $white-color;
   background-color: $black-color;
   position: relative;
