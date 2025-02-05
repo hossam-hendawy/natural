@@ -17,20 +17,15 @@
   @include media-screen-768 {
     padding-inline: $container-padding-tablet;
   }
-  @include large-screen {
-    padding-inline: $container-padding-desktop;
-  }
-  @include xx-large-screen {
-    padding-inline: size(30);
-  }
-  @include media-screen-from-2500 {
-    padding-inline: size(150);
+  @include xx-large-screen{
+    max-width: 1380px;
   }
 }
 
 .cta-button {
   @include theme-cta-style;
 }
+
 
 .cta-link {
   width: fit-content;
@@ -164,6 +159,9 @@
   }
 }
 
+.br-10{
+  border-radius: 10px;
+}
 
 section {
   position: relative;

@@ -1,0 +1,22 @@
+@import '../../styles/variables.scss';
+
+.image_block {
+  padding-block: 80px;
+
+  .container {
+    padding: 0;
+    @include media-screen-600 {
+      padding: $container-padding-tablet;
+    }
+  }
+  .image-wrapper {
+    padding-top: 133.33%;
+    border-radius: 10px;
+    overflow: hidden;
+    
+    @include media-screen-600 {
+      padding-top: 54.347%;
+    }
+  }
+  
+}

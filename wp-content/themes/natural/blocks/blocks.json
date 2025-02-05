@@ -3,4 +3,8 @@
     "title": "Map Block",
     "status": true
   },
+  "image_block": {
+    "title": "Image Block",
+    "status": true
+  }
 }

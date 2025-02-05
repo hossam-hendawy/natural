@@ -57,7 +57,7 @@ $image = get_field('image');
     console.log("[\n " + formattedHistory.join(",\n ") + "\n]");
   }
 
-   logImageSizeHistoryArray('picture.image.aspect-ratio.aspect-ratio-5x4');
+   logImageSizeHistoryArray('.asd');
 
 
 </script>
