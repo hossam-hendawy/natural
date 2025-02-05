@@ -1,0 +1,171 @@
+@import 'variables.scss';
+
+.no-scroll {
+  overflow: hidden;
+}
+
+.hide-scrollbar {
+  scrollbar-width: none !important; // Hide Scrollbar FireFox
+  &::-webkit-scrollbar { // Hide Scrollbar Chrome
+    display: none;
+  }
+}
+
+.container {
+  margin: 0 auto;
+  padding-inline: $container-padding-mobile;
+  @include media-screen-768 {
+    padding-inline: $container-padding-tablet;
+  }
+  @include large-screen {
+    padding-inline: $container-padding-desktop;
+  }
+  @include xx-large-screen {
+    padding-inline: size(30);
+  }
+  @include media-screen-from-2500 {
+    padding-inline: size(150);
+  }
+}
+
+.cta-button {
+  @include theme-cta-style;
+}
+
+.cta-link {
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  gap: size(8);
+  color: $white-color;
+  font-size: size(24);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 125%;
+  text-transform: capitalize;
+  @include min-medium-screen {
+    font-size: size(32);
+  }
+  
+  svg {
+    width: size(40);
+    height: size(40);
+    transition: transform $duration;
+  }
+  
+  &:hover {
+    svg {
+      transform: translateX(size(5));
+    }
+  }
+  
+  &.small-cta-link {
+    font-size: size(24);
+    
+    svg {
+      width: size(24);
+      height: size(24);
+    }
+  }
+}
+
+.capital-text {
+  text-transform: capitalize;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.d-block {
+  display: block;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.black-color {
+  color: $black-color;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+.align-end {
+  align-items: flex-end;
+}
+
+.border-r10 {
+  border-radius: size(10);
+}
+
+.desktop-only {
+  display: none;
+  @include media-screen-600 {
+    display: flex;
+  }
+}
+
+.mobile-only {
+  display: flex;
+  @include media-screen-600 {
+    display: none;
+  }
+}
+
+.white-color, .white-color p {
+  color: $white-color;
+}
+
+.image-hover-effect {
+  img {
+    display: block;
+    transition: transform $duration;
+    transform-origin: center center;
+    transform: scale(1);
+  }
+  
+  &:hover {
+    img {
+      transform: scale(1.02);
+    }
+  }
+}
+
+.content-space-between {
+  justify-content: space-between;
+}
+
+.align-end {
+  align-items: flex-end;
+}
+
+.ml-auto {
+  margin-left: auto;
+}
+
+.cover-image {
+  display: block;
+  
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+
+section {
+  position: relative;
+}
+

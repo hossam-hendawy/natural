@@ -1,0 +1,190 @@
+@use "sass:math";
+
+$duration: .6s;
+$ease: ease-out;
+
+// new variables
+$white-color: #FFFFFF;
+$off-white-color: #F6F6FB;
+$black-color: #000000;
+$dark-gray: #191919;
+$medium-gray: #4D4D4D;
+$gold: #F8C51E;
+
+
+$proxima_nova: 'proxima-nova';
+
+
+$container-padding-mobile: 20px;
+$container-padding-tablet: 30px;
+$container-padding-desktop: 30px;
+
+
+// media screen sizes
+$small-screen-max-width: 599.98px;
+$medium-screen-max-width: 1023.98px;
+$medium-screen-min-600: 600px;
+$medium-screen-min-768: 768px;
+$medium-screen-min-width: 1024px;
+$medium-screen-min-992: 992px;
+$large-screen-min-width: 1280px;
+$x-large-screen-min-width: 1440px;
+$xx-large-screen-min-width: 1920px;
+$xxx-large-screen-min-width: 2500px;
+
+//region media query
+
+//region {only} media
+
+@mixin small-screen() {
+  @media screen and (max-width: $small-screen-max-width) {
+    @content;
+  }
+}
+
+@mixin media-screen-600() {
+  @media screen and (min-width: $medium-screen-min-600) {
+    @content;
+  }
+}
+
+@mixin max-screen-768() {
+  @media screen and (max-width: 767.98px) {
+    @content;
+  }
+}
+
+@mixin media-screen-768() {
+  @media screen and (min-width: $medium-screen-min-768) {
+    @content;
+  }
+}
+
+@mixin min-media-screen-600() {
+  @media screen and (min-width: $medium-screen-min-600) {
+    @content;
+  }
+}
+
+@mixin min-media-screen-992() {
+  @media screen and (min-width: $medium-screen-min-992) {
+    @content;
+  }
+}
+
+@mixin media-screen-from600-to1024() {
+  @media screen and (min-width: $medium-screen-min-600) and (max-width: $medium-screen-max-width) {
+    @content;
+  }
+}
+
+
+@mixin large-screen() {
+  @media screen and (min-width: $large-screen-min-width) {
+    @content;
+  }
+}
+
+@mixin x-large-screen() {
+  @media screen and (min-width: $x-large-screen-min-width) {
+    @content;
+  }
+}
+
+@mixin xx-large-screen() {
+  @media screen and (min-width: $xx-large-screen-min-width) {
+    @content;
+  }
+}
+
+@mixin media-screen-from-2500() {
+  @media screen and (min-width: $xxx-large-screen-min-width) {
+    @content;
+  }
+}
+
+//endregion {only} media
+
+//region {max} media
+@mixin max-medium-screen() {
+  @media screen and (max-width: $medium-screen-max-width) {
+    @content;
+  }
+}
+
+//endregion {max} media
+
+//region {min} media
+@mixin min-medium-screen() {
+  @media screen and (min-width: $medium-screen-min-width) {
+    @content;
+  }
+}
+
+//endregion {min} media
+
+//endregion media query
+
+@mixin theme-cta-style {
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: size(19) size(34.9);
+  border-radius: size(8);
+  cursor: pointer;
+  font-family: $proxima_nova;
+  color: $black-color;
+  font-size: size(24);
+  font-style: normal;
+  font-weight: 600;
+  line-height: 100%;
+  text-transform: capitalize;
+  background-color: $gold;
+  border: size(1) solid $gold;
+  transition: background-color $duration, color $duration, border-color $duration;
+  
+  &:hover {
+    color: $white-color;
+    background-color: $dark-gray;
+    border-color: $medium-gray;
+  }
+  
+  &.has-icon {
+    padding: size(19) size(31);
+    gap: size(8);
+    
+    svg {
+      width: size(24);
+      height: size(24);
+      
+      path {
+        stroke: currentColor;
+      }
+    }
+  }
+}
+
+@mixin after-style {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+@mixin star-style {
+  color: $white-color;
+  font-family: $proxima_nova;
+  font-size: size(16);
+  font-style: normal;
+  font-weight: 700;
+  line-height: 140%;
+}
+
+$base-width: 3840;
+// Function to convert px value into vw
+@function size($target, $context: $base-width) {
+  @return ($target / $context) * 100vw;
+}

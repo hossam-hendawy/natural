@@ -1,0 +1,10 @@
+@import 'typography.scss';
+@import 'variables.scss';
+
+.stop-scroll {
+  @include max-medium-screen {
+    overflow: hidden;
+  }
+
+}
+
