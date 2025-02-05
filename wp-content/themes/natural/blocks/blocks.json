@@ -6,5 +6,9 @@
   "image_block": {
     "title": "Image Block",
     "status": true
+  },
+  "home_here_block": {
+    "title": "Home Here Block",
+    "status": true
   }
 }
