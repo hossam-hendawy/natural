@@ -27,110 +27,138 @@ body {
 h1, .natural-h1, .natural-h1 p {
   color: $white-color;
   font-family: inherit;
-  font-size: size(60);
-  font-weight: 600;
-  line-height: 100%;
+  font-size: 60px;
+  font-weight: 400;
+  line-height: 105%;
   @include min-medium-screen {
-    font-size: size(120);
+    font-size: 80px;
   }
   
+  &.lh-72 {
+    line-height: 90%;
+  }
 }
 
 h2, .natural-h2, .natural-h2 p {
   color: $white-color;
   font-family: inherit;
-  font-size: size(40);
+  font-size: 40px;
   font-weight: 400;
-  line-height: 110%;
+  line-height: 100%;
   @include min-medium-screen {
-    font-size: size(80);
+    font-size: 72px;
   }
 }
 
 h3, .natural-h3, .natural-h3 p {
   color: $white-color;
   font-family: inherit;
-  font-size: size(32);
+  font-size: 32px;
   font-weight: 400;
-  line-height: 121.8%;
+  line-height: 106%;
   @include min-medium-screen {
-    font-size: size(56);
+    font-size: 60px;
   }
 }
 
-h4, .natural-h4, .natural-h4 p, p {
+h4, .natural-h4, .natural-h4 p, {
   color: $white-color;
   font-family: inherit;
-  font-size: size(26);
+  font-size: 26px;
   font-style: normal;
-  font-weight: 600;
-  line-height: 100%;
+  font-weight: 400;
+  line-height: 107%;
   @include min-medium-screen {
-    font-size: size(48);
+    font-size: 52px;
   }
 }
 
 h5, .natural-h5, .natural-h5 p {
   color: $white-color;
   font-family: inherit;
-  font-size: size(32);
+  font-size: 24px;
   font-style: normal;
-  font-weight: 600;
-  line-height: 100%;
+  font-weight: 400;
+  line-height: 336%;
   @include min-medium-screen {
-    font-size: size(40);
+    font-size: 32px;
   }
 }
 
 h6, .natural-h6, .natural-h6 p {
   color: $white-color;
-  font-size: size(32);
+  font-size: 32px;
   font-style: normal;
-  font-weight: 600;
-  line-height: 125%;
-  @include min-media-screen-992 {
-    font-size: size(32);
+  font-weight: 400;
+  line-height: 32px;
+  @include min-medium-screen {
+    font-size: 28px;
   }
 }
 
 .fz-24, .fz-24 p {
   color: $white-color;
-  font-size: size(16);
+  font-size: 16px;
   font-style: normal;
-  font-weight: 600;
-  line-height: 100%;
+  font-weight: 200;
+  line-height: 116%;
   @include min-medium-screen {
-    font-size: size(24);
+    font-size: 24px;
   }
 }
 
-.fz-28, .fz-28 p {
+.fz-18, .fz-18 p {
   color: $white-color;
-  font-size: size(16);
+  font-size: 16px;
   font-style: normal;
-  font-weight: 600;
-  line-height: 128.57%;
+  font-weight: 500;
+  line-height: 133%;
   @include min-medium-screen {
-    font-size: size(28);
+    font-size: 18px;
   }
+}
+
+.fz-16, .fz-16 p {
+  color: $white-color;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 125%;
+  @include min-medium-screen {
+    font-size: 16px;
+  }
+}
+
+.fz-14, .fz-14 p {
+  color: $white-color;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%;
+}
+
+
+.fw-400, .fw-400 p {
+  font-weight: 400;
+}
+
+.fw-500, .fw-500 p {
+  font-weight: 500;
+}
+
+.fw-300, .fw-300 p {
+  font-weight: 300;
+}
+
+.fw-200, .fw-200 p {
+  font-weight: 200;
 }
 
 .capitalize-text {
   text-transform: capitalize;
 }
 
-.regular, .regular p {
-  font-weight: 400;
+.uppercase-text {
+  text-transform: uppercase;
 }
 
-.medium, .medium p {
-  font-weight: 600;
-}
-
-.bold, .bold p {
-  font-weight: 700;
-}
-
-.gold {
-  color: $gold;
-}

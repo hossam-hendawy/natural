@@ -5,11 +5,10 @@ $ease: ease-out;
 
 // new variables
 $white-color: #FFFFFF;
-$off-white-color: #F6F6FB;
+$off-white-color: #FFFDE7;
 $black-color: #000000;
-$dark-gray: #191919;
-$medium-gray: #4D4D4D;
-$gold: #F8C51E;
+$lime: #96F56D;
+$spinach: #1C301A;
 
 
 $proxima_nova: 'proxima-nova';
@@ -140,14 +139,14 @@ $xxx-large-screen-min-width: 2500px;
   font-weight: 600;
   line-height: 100%;
   text-transform: capitalize;
-  background-color: $gold;
-  border: size(1) solid $gold;
+  background-color: $spinach;
+  border: size(1) solid $spinach;
   transition: background-color $duration, color $duration, border-color $duration;
   
   &:hover {
     color: $white-color;
-    background-color: $dark-gray;
-    border-color: $medium-gray;
+    background-color: $lime;
+    border-color: $spinach;
   }
   
   &.has-icon {
