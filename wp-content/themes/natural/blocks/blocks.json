@@ -14,5 +14,9 @@
   "latest_news_block": {
     "title": "Latest News Block",
     "status": true
+  },
+  "image_and_text_block": {
+    "title": "Image And Text Block",
+    "status": true
   }
 }
