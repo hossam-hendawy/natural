@@ -130,37 +130,23 @@ $xxx-large-screen-min-width: 2500px;
   align-items: center;
   justify-content: center;
   padding: size(19) size(34.9);
-  border-radius: size(8);
+  min-width: 145px;
+  min-height: 38px;
+  border-radius: 8px;
   cursor: pointer;
   font-family: $space_grotesk;
-  color: $black-color;
-  font-size: size(24);
+  color: $spinach;
+  font-size: 14px;
   font-style: normal;
-  font-weight: 600;
+  font-weight: 500;
   line-height: 100%;
   text-transform: capitalize;
-  background-color: $spinach;
-  border: size(1) solid $spinach;
+  background-color: $lime;
   transition: background-color $duration, color $duration, border-color $duration;
   
   &:hover {
     color: $white-color;
-    background-color: $lime;
-    border-color: $spinach;
-  }
-  
-  &.has-icon {
-    padding: size(19) size(31);
-    gap: size(8);
-    
-    svg {
-      width: size(24);
-      height: size(24);
-      
-      path {
-        stroke: currentColor;
-      }
-    }
+    background-color: $spinach;
   }
 }
 

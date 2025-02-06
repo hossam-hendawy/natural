@@ -93,8 +93,8 @@
         },
         {
             "key": "field_67a39b4dc738c",
-            "label": "CTA",
-            "name": "cta",
+            "label": "Cta Button",
+            "name": "cta_button",
             "aria-label": "",
             "type": "link",
             "instructions": "",
@@ -127,5 +127,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1738818633
+    "modified": 1738819679
 }

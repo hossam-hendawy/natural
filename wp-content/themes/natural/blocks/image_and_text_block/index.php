@@ -21,11 +21,50 @@ if (isset($block)) {
 }
 ?>
 <?php
-$media_image = get_field('image');
-$video = get_field('video');
+$image = get_field('image');
+$label = get_field('label');
+$title = get_field('title');
+$description = get_field('description');
+$cta_button = get_field('cta_button');
+
 ?>
 <section id="<?= esc_attr($id) ?>" class="<?= esc_attr($className) ?>">
   <div class="container">
-  
+    <div class="cards-wrapper">
+      <div class="image-card">
+        <?php
+        $picture_class = 'left-image aspect-ratio';
+        echo bis_get_attachment_picture(
+            $image,
+            [
+                375 => [335, 303, 1],
+                1024 => [432, 390, 1],
+                1280 => [513, 463, 1],
+                1440 => [585, 528, 1],
+                1920 => [585, 528, 1],
+                2500 => [585, 528, 1]
+            ],
+            [
+                'retina' => true, 'picture_class' => $picture_class,
+            ],
+        );
+        ?>
+      </div>
+      <div class="right-content">
+        <?php if ($label) { ?>
+          <h2 class="label fz-14 fw-400"><?= $label ?></h2>
+        <?php } ?>
+        <?php if ($title) { ?>
+          <h2 class="title natural-h1 fw-400 lh-72"><?= $title ?></h2>
+        <?php } ?>
+        <?php if ($description) { ?>
+          <div class="description fz-16 fw-300"><?= $description ?></div>
+        <?php } ?>
+        <?php if (!empty($cta_button) && is_array($cta_button)) { ?>
+          <a class="cta-button" href="<?= $cta_button['url'] ?>" target="<?= $cta_button['target'] ?>"><?= $cta_button['title'] ?></a>
+        <?php } ?>
+
+      </div>
+    </div>
   </div>
 </section>

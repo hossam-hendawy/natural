@@ -57,6 +57,18 @@
   }
 }
 
+.label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100px;
+  border: 1px solid $spinach;
+  color: $spinach;
+  padding: 5px 11px;
+  width: fit-content;
+  height: fit-content;
+}
+
 .capital-text {
   text-transform: capitalize;
 }

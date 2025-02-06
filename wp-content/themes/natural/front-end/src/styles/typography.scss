@@ -34,9 +34,9 @@ body {
 }
 
 h1, .natural-h1, .natural-h1 p {
-  color: $white-color;
+  color: $spinach;
   font-family: inherit;
-  font-size: 60px;
+  font-size: 40px;
   font-weight: 400;
   line-height: 105%;
   @include min-medium-screen {
@@ -125,7 +125,7 @@ h6, .natural-h6, .natural-h6 p {
 }
 
 .fz-16, .fz-16 p {
-  color: $white-color;
+  color: $spinach;
   font-size: 16px;
   font-style: normal;
   font-weight: 300;
@@ -133,7 +133,7 @@ h6, .natural-h6, .natural-h6 p {
 }
 
 .fz-14, .fz-14 p {
-  color: $white-color;
+  color: $spinach;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
