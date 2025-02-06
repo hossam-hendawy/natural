@@ -112,9 +112,9 @@
     "location": [
         [
             {
-                "param": "post_type",
+                "param": "block",
                 "operator": "==",
-                "value": "post"
+                "value": "acf\/image-block"
             }
         ]
     ],
@@ -127,5 +127,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1738775387
+    "modified": 1738813840
 }

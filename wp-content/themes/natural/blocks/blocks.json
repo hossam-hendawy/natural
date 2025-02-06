@@ -10,5 +10,9 @@
   "home_here_block": {
     "title": "Home Here Block",
     "status": true
+  },
+  "latest_news_block": {
+    "title": "Latest News Block",
+    "status": true
   }
 }
