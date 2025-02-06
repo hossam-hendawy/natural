@@ -71,7 +71,7 @@ if ($programmatic_or_manual === 'programmatic') {
     <?php if ($programmatic_or_manual === "manual") { ?>
       <div class="swiper recent-projects-Swiper">
         <div class="swiper-wrapper">
-          <?php foreach (get_field("project_card") as $card):
+          <?php foreach (get_field("news_card") as $card):
             get_template_part("partials/news-card/news-card", "", ["post_id" => $card->ID]);
           endforeach; ?>
         </div>
@@ -89,15 +89,3 @@ if ($programmatic_or_manual === 'programmatic') {
     <?php } ?>
   </div>
 </section>
-
-
-
-
-
-
-
-
-
-
-
-

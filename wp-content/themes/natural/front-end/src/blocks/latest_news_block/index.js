@@ -8,7 +8,7 @@ export function latest_news_block() {
   const block = document.querySelector('.latest_news_block');
   if (!block) return;
   
-
+  
   const swiper = new Swiper(block.querySelector('.recent-projects-Swiper'), {
     slidesPerView: 1,
     spaceBetween: 20,
@@ -16,17 +16,15 @@ export function latest_news_block() {
     modules: [Navigation],
     breakpoints: {
       600: {
-        spaceBetween: 16,
         slidesPerView: 2,
-      },
-      992: {
-        slidesPerView: 3,
       },
       1024: {
         slidesPerView: 3,
+      },
+      1280: {
+        slidesPerView: 3,
         spaceBetween: 40,
       },
-      
     },
     navigation: {
       nextEl: block.querySelector(".swiper-button-next"),

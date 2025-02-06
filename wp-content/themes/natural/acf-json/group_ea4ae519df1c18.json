@@ -12,12 +12,13 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "50",
+                "width": "",
                 "class": "",
                 "id": ""
             },
             "default_value": "",
             "maxlength": "",
+            "allow_in_bindings": 1,
             "placeholder": "",
             "prepend": "",
             "append": ""
@@ -56,9 +57,9 @@
             "save_other_choice": 0
         },
         {
-            "key": "field_63ebda5b06f00",
-            "label": "Project Card",
-            "name": "project_card",
+            "key": "field_67a43dd211859",
+            "label": "News Card",
+            "name": "news_card",
             "aria-label": "",
             "type": "relationship",
             "instructions": "",
@@ -80,16 +81,17 @@
             "post_type": [
                 "post"
             ],
+            "post_status": "",
             "taxonomy": "",
             "filters": [
                 "search"
             ],
             "return_format": "object",
             "min": "",
-            "max": 3,
-            "elements": [
-                "featured_image"
-            ],
+            "max": "",
+            "allow_in_bindings": 1,
+            "elements": "",
+            "bidirectional": 0,
             "bidirectional_target": []
         },
         {
@@ -189,5 +191,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1738813615
+    "modified": 1738817040
 }
