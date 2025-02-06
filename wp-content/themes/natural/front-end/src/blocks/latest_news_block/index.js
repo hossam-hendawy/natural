@@ -10,8 +10,8 @@ export function latest_news_block() {
   
 
   const swiper = new Swiper(block.querySelector('.recent-projects-Swiper'), {
-    slidesPerView: 'auto',
-    spaceBetween: 16,
+    slidesPerView: 1,
+    spaceBetween: 20,
     loop: true,
     modules: [Navigation],
     breakpoints: {
@@ -24,7 +24,7 @@ export function latest_news_block() {
       },
       1024: {
         slidesPerView: 3,
-        spaceBetween: 20,
+        spaceBetween: 40,
       },
       
     },

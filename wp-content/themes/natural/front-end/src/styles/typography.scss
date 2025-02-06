@@ -27,8 +27,8 @@ html {
 
 body {
   font-family: $space_grotesk !important;
-  color: $off-white-color;
-  background-color: $spinach;
+  color: $white-color;
+  background-color: $off-white-color;
   position: relative;
   overflow-x: hidden;
 }
@@ -95,14 +95,11 @@ h5, .natural-h5, .natural-h5 p {
 }
 
 h6, .natural-h6, .natural-h6 p {
-  color: $white-color;
-  font-size: 32px;
+  color: $spinach;
+  font-size: 28px;
   font-style: normal;
   font-weight: 400;
   line-height: 32px;
-  @include min-medium-screen {
-    font-size: 28px;
-  }
 }
 
 .fz-24, .fz-24 p {

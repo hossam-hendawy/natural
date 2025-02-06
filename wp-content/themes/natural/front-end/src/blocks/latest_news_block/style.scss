@@ -8,34 +8,34 @@
     padding-block: 35px 74px;
   }
 
+  .container {
+    @include x-large-screen {
+      padding-inline: 50px;
+    }
+  }
+  
+  .title {
+    color: $spinach;
+  }
+  
   .top-content-wrapper {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 36px;
+    margin-bottom: 48px;
   }
   
-  .swiper-navigations {
-    margin-top: 46px;
-    display: flex;
-    @include min-media-screen-992 {
-      display: none;
-    }
-  }
-  
-  .project-card {
+  .news-card {
     display: flex;
     flex-direction: column;
-    
+    padding-bottom: 25px;
+    border-bottom: 1px solid $spinach;
+    height: auto;
     
     .image-wrapper {
-      padding-top: 61.428%;
+      padding-top: 100%;
       border-radius: 10px;
       overflow: hidden;
-      
-      &.border-none {
-        border-radius: 10px 10px 0 0;
-      }
     }
     
     .project-links {
@@ -43,11 +43,7 @@
     }
     
     .post-title {
-      margin-block: 22px 2px;
-      font-size: 16px;
-      @include large-screen {
-        font-size: 18px;
-      }
+      margin-block: 20px 22px;
     }
     
     .location {
