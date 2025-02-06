@@ -1,6 +1,40 @@
 @import '../../styles/variables.scss';
 
 .home_here_block {
-
+  @include max-screen-768 {
+    height: 100vh;
+  }
   
+  @include media-screen-768 {
+    padding-block: 236px 94px;
+  }
+  
+  .container {
+    padding-inline: 0;
+    @include media-screen-768 {
+      padding-inline: $container-padding-tablet;
+    }
+  }
+  
+  .media-wrapper {
+    
+    border-radius: 10px 10px 0 0;
+    @include media-screen-768 {
+      padding-top: 45.2898%;
+      border-radius: 10px;
+    }
+  }
+  
+  .media-wrapper {
+    @include max-screen-768 {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  
+}
+
+#wpadminbar {
+  display: none;
 }

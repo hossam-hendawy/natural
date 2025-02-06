@@ -8,7 +8,7 @@ header {
   z-index: 99;
   transform: translateX(0);
   transition: background-color $duration;
-  background-color: $black-color;
+  background-color: transparent;
   display: flex;
   align-items: center;
   justify-content: space-between;

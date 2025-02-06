@@ -72,7 +72,7 @@
 102C:\wamp64\www\natural\wp-content\themes\natural\front-end\node_modules\update-browserslist-db\index.js133832418012381070 0
 107C:\wamp64\www\natural\wp-content\themes\natural\front-end\node_modules\autoprefixer\lib\hacks\cross-fade.js133832418024923263 0
 102C:\wamp64\www\natural\wp-content\themes\natural\front-end\node_modules\swiper\modules\a11y-element.css133832418026792066 0
-95C:\wamp64\www\natural\wp-content\themes\natural\front-end\src\blocks\home_here_block\style.scss133832516948438053 0
+95C:\wamp64\www\natural\wp-content\themes\natural\front-end\src\blocks\home_here_block\style.scss133832530886028549 0
 101C:\wamp64\www\natural\wp-content\themes\natural\front-end\node_modules\@parcel\watcher\src\Watcher.hh133832418038476300 0
 89C:\wamp64\www\natural\wp-content\themes\natural\front-end\node_modules\swiper\swiper.less133832418051385474 0
 91C:\wamp64\www\natural\wp-content\themes\natural\front-end\node_modules\postcss-value-parser133832418014870470 1
@@ -213,7 +213,7 @@
 91C:\wamp64\www\natural\wp-content\themes\natural\front-end\node_modules\term-size\index.d.ts133832418016987279 0
 95C:\wamp64\www\natural\wp-content\themes\natural\front-end\node_modules\msgpackr-extract\LICENSE133832418001895755 0
 88C:\wamp64\www\natural\wp-content\themes\natural\front-end\node_modules\lines-and-columns133832418007368341 1
-80C:\wamp64\www\natural\wp-content\themes\natural\front-end\src\blocks\headerBlock133832434068246631 1
+80C:\wamp64\www\natural\wp-content\themes\natural\front-end\src\blocks\headerBlock133832523560310283 1
 99C:\wamp64\www\natural\wp-content\themes\natural\front-end\node_modules\type-fest\source\except.d.ts133832418021150364 0
 83C:\wamp64\www\natural\wp-content\themes\natural\front-end\node_modules\import-fresh133832418009893459 1
 99C:\wamp64\www\natural\wp-content\themes\natural\front-end\src\styles\fonts\SpaceGrotesk-Regular.ttf133699650800000000 0
@@ -278,7 +278,7 @@
 80C:\wamp64\www\natural\wp-content\themes\natural\front-end\src\blocks\footerBlock133832412423287045 1
 114C:\wamp64\www\natural\wp-content\themes\natural\front-end\node_modules\source-map-js\lib\source-map-generator.d.ts133832418022761530 0
 119C:\wamp64\www\natural\wp-content\themes\natural\front-end\node_modules\caniuse-lite\data\features\permissions-policy.js133832418089575684 0
-84C:\wamp64\www\natural\wp-content\themes\natural\front-end\src\blocks\home_here_block133832516948438053 1
+84C:\wamp64\www\natural\wp-content\themes\natural\front-end\src\blocks\home_here_block133832530886058570 1
 101C:\wamp64\www\natural\wp-content\themes\natural\front-end\node_modules\swiper\modules\history.min.mjs133832418059686713 0
 102C:\wamp64\www\natural\wp-content\themes\natural\front-end\node_modules\sass\types\legacy\importer.d.ts133832418057448083 0
 122C:\wamp64\www\natural\wp-content\themes\natural\front-end\node_modules\lmdb\dependencies\lmdb\libraries\liblmdb\mdb_dump.c133832418035568069 0
@@ -320,7 +320,7 @@
 89C:\wamp64\www\natural\wp-content\themes\natural\front-end\src\blocks\headerBlock\index.js133824309817542390 0
 89C:\wamp64\www\natural\wp-content\themes\natural\front-end\node_modules\jquery\src\data.js133832418029620623 0
 111C:\wamp64\www\natural\wp-content\themes\natural\front-end\node_modules\posthtml\node_modules\dom-serializer\lib133832418021990223 1
-91C:\wamp64\www\natural\wp-content\themes\natural\front-end\src\blocks\headerBlock\style.scss133832434068146654 0
+91C:\wamp64\www\natural\wp-content\themes\natural\front-end\src\blocks\headerBlock\style.scss133832523560210324 0
 107C:\wamp64\www\natural\wp-content\themes\natural\front-end\node_modules\swiper\modules\free-mode-element.css133832418038258528 0
 91C:\wamp64\www\natural\wp-content\themes\natural\front-end\src\blocks\footerBlock\style.scss133827800095227471 0
 107C:\wamp64\www\natural\wp-content\themes\natural\front-end\node_modules\caniuse-lite\data\features\tls1-1.js133832418098685720 0

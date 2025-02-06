@@ -20,31 +20,37 @@ if (isset($block)) {
   }
 }
 ?>
+<?php
+$media_image = get_field('image');
+$video = get_field('video');
+?>
 <section id="<?= esc_attr($id) ?>" class="<?= esc_attr($className) ?>">
   <div class="container">
-    <?php
-    $image = get_field('image');
-    ?>
-    <div>
-      <?php
-      $picture_class = 'aspect-ratio image-wrapper';
-      echo bis_get_attachment_picture(
-          $image,
-          [
-              375 => [375, 500, 1],
-              600 => [560, 304, 1],
-              768 => [708, 385, 1],
-              992 => [932, 507, 1],
-              1024 => [964, 524, 1],
-              1280 => [1220, 663, 1],
-              1440 => [1380, 750, 1],
-              1920 => [1320, 717, 1]
-          ],
-          [
-              'retina' => true, 'picture_class' => $picture_class,
-          ],
-      );
-      ?>
-    </div>
+    <?php if ($select_media = get_field('select_media') === 'video') { ?>
+      <div class="aspect-ratio media-wrapper">
+        <video playsinline autoplay muted loop src="<?= $video ?>" class="video " data-video-type="video_file"></video>
+      </div>
+    <?php } else { ?>
+      <div>
+        <?php
+        $picture_class = 'aspect-ratio media-wrapper';
+        echo bis_get_attachment_picture(
+            $media_image,
+            [
+                375 => [375, 785, 1],
+                600 => [600, 1256, 1],
+                768 => [708, 321, 1],
+                992 => [932, 422, 1],
+                1024 => [964, 437, 1],
+                1280 => [1220, 553, 1],
+                1440 => [1380, 625, 1]
+            ],
+            [
+                'retina' => true, 'picture_class' => $picture_class,
+            ],
+        );
+        ?>
+      </div>
+    <?php } ?>
   </div>
 </section>
