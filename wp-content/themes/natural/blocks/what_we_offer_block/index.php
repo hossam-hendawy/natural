@@ -30,7 +30,7 @@ $cta_button = get_field('cta_button');
 ?>
 <section id="<?= esc_attr($id) ?>" class="<?= esc_attr($className) ?>">
   <div class="container">
-    <div class="content-wrapper">
+    <div class="content-wrapper br-10">
       <div class="left-content-wrapper">
         <?php if ($label) { ?>
           <h2 class="label light fz-14 fw-400"><?= $label ?></h2>
@@ -39,7 +39,6 @@ $cta_button = get_field('cta_button');
           <h2 class="title natural-h2 fw-400 lh-72"><?= $title ?></h2>
         <?php } ?>
       </div>
-  
     </div>
   </div>
 </section>
