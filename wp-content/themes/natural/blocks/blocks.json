@@ -26,5 +26,9 @@
   "how_we_do_it_block": {
     "title": "How We Do It Block",
     "status": true
+  },
+  "get_started_block": {
+    "title": "Get Started Block",
+    "status": true
   }
 }
