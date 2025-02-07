@@ -1,9 +1,9 @@
 {
-    "key": "group_67a5fc9656112",
-    "title": "What we offer Block",
+    "key": "group_67a644e763d8c",
+    "title": "How We Do It Block",
     "fields": [
         {
-            "key": "field_67a5fc9660535",
+            "key": "field_67a644e76e40a",
             "label": "Label",
             "name": "label",
             "aria-label": "",
@@ -24,7 +24,7 @@
             "append": ""
         },
         {
-            "key": "field_67a5fc9663f63",
+            "key": "field_67a644e771cf9",
             "label": "Title",
             "name": "title",
             "aria-label": "",
@@ -45,7 +45,7 @@
             "append": ""
         },
         {
-            "key": "field_67a626fff8682",
+            "key": "field_67a644e7758b9",
             "label": "Accordion Repeater",
             "name": "accordion_repeater",
             "aria-label": "",
@@ -67,7 +67,34 @@
             "rows_per_page": 20,
             "sub_fields": [
                 {
-                    "key": "field_67a627aff8684",
+                    "key": "field_67a644e788600",
+                    "label": "Icon",
+                    "name": "icon",
+                    "aria-label": "",
+                    "type": "image",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": "",
+                    "allow_in_bindings": 0,
+                    "preview_size": "medium",
+                    "parent_repeater": "field_67a644e7758b9"
+                },
+                {
+                    "key": "field_67a644e77d574",
                     "label": "Title",
                     "name": "title",
                     "aria-label": "",
@@ -86,10 +113,10 @@
                     "placeholder": "",
                     "prepend": "",
                     "append": "",
-                    "parent_repeater": "field_67a626fff8682"
+                    "parent_repeater": "field_67a644e7758b9"
                 },
                 {
-                    "key": "field_67a627b9f8685",
+                    "key": "field_67a644e780fa7",
                     "label": "Description",
                     "name": "description",
                     "aria-label": "",
@@ -108,52 +135,7 @@
                     "toolbar": "full",
                     "media_upload": 1,
                     "delay": 0,
-                    "parent_repeater": "field_67a626fff8682"
-                },
-                {
-                    "key": "field_67a62790f8683",
-                    "label": "Cta Link",
-                    "name": "cta_link",
-                    "aria-label": "",
-                    "type": "link",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "return_format": "array",
-                    "allow_in_bindings": 0,
-                    "parent_repeater": "field_67a626fff8682"
-                },
-                {
-                    "key": "field_67a627d3a2b35",
-                    "label": "Image",
-                    "name": "image",
-                    "aria-label": "",
-                    "type": "image",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "return_format": "id",
-                    "library": "all",
-                    "min_width": "",
-                    "min_height": "",
-                    "min_size": "",
-                    "max_width": "",
-                    "max_height": "",
-                    "max_size": "",
-                    "mime_types": "",
-                    "allow_in_bindings": 0,
-                    "preview_size": "medium",
-                    "parent_repeater": "field_67a626fff8682"
+                    "parent_repeater": "field_67a644e7758b9"
                 }
             ]
         }
@@ -163,7 +145,7 @@
             {
                 "param": "block",
                 "operator": "==",
-                "value": "acf\/what-we-offer-block"
+                "value": "acf\/how-we-do-it-block"
             }
         ]
     ],
@@ -176,5 +158,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1738949902
+    "modified": 1738949922
 }
