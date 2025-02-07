@@ -23,7 +23,7 @@ if (isset($block)) {
 <?php
 $image = get_field('image');
 $label = get_field('label');
-$title = get_field('title');
+$main_title = get_field('title');
 $description = get_field('description');
 $cta_button = get_field('cta_button');
 
@@ -35,12 +35,13 @@ $cta_button = get_field('cta_button');
         <?php if ($label) { ?>
           <h2 class="label light fz-14 fw-400"><?= $label ?></h2>
         <?php } ?>
-        <?php if ($title) { ?>
-          <h2 class="main-title natural-h2 fw-400 lh-72"><?= $title ?></h2>
+        <?php if ($main_title) { ?>
+          <h2 class="main-title natural-h2 fw-400 lh-72"><?= $main_title ?></h2>
         <?php } ?>
         
+        
         <div class="accordion">
-          <div class="accordion-panel active" itemscope="" itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <div class="accordion-panel active" data-tab="1" itemscope="" itemprop="mainEntity" itemtype="https://schema.org/Question">
             <div id="panel2-title" class="accordion-title">
               <button class="accordion-trigger medium" aria-expanded="true">
                 <span>Chargrilling</span>
@@ -55,7 +56,8 @@ $cta_button = get_field('cta_button');
             <div class="accordion-content" role="region" aria-labelledby="panel2-title" aria-hidden="false">
               <div class="answer" itemscope="" itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
                 <p class="spacer"></p>
-                <p class="description">Flame grilling hearty veg to bring the smoky BBQ flavours consumers can’t get enough of.</p>
+                <p class="description">Flame grilling hearty veg to bring the smoky BBQ flavours consumers can’t get
+                  enough of.</p>
                 <a class="cta-link fz-16 spinach-color  fw-400" href="http://localhost/natural/2025/02/06/the-importance-of-shelf-life-dates-3/" target="_self">
                   Read more
                   <svg width="15" height="12" viewBox="0 0 15 12" fill="none" aria-hidden="true">
@@ -63,11 +65,11 @@ $cta_button = get_field('cta_button');
                     <path d="M9.66851 5.55855C5.83344 4.49656 6.12221 1.04972e-06 6.12221 1.04972e-06L3.67917 6.30837e-07C3.67917 2.4252 4.59022 3.79726 5.56415 4.57086C5.97118 4.8942 6.42825 5.14145 6.91367 5.30776L-7.06768e-07 3.96401L-1.27553e-06 7.15397L6.91367 5.81023C6.42825 5.97654 5.97162 6.22379 5.5646 6.54712C4.59022 7.32072 3.67961 8.69234 3.67961 11.118L6.12265 11.118C6.12265 11.118 5.83388 6.62143 9.66895 5.55943" fill="#1C301A"></path>
                   </svg>
                 </a>
-                
+              
               </div>
             </div>
           </div>
-          <div class="accordion-panel" itemscope="" itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <div class="accordion-panel" data-tab="2" itemscope="" itemprop="mainEntity" itemtype="https://schema.org/Question">
             <div id="panel2-title" class="accordion-title">
               <button class="accordion-trigger medium" aria-expanded="false">
                 <span>Roasting</span>
@@ -82,7 +84,8 @@ $cta_button = get_field('cta_button');
             <div class="accordion-content" role="region" aria-labelledby="panel2-title">
               <div class="answer" itemscope="" itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
                 <p class="spacer"></p>
-                <p class="description">Flame grilling hearty veg to bring the smoky BBQ flavours consumers can’t get enough of.</p>
+                <p class="description">Flame grilling hearty veg to bring the smoky BBQ flavours consumers can’t get
+                  enough of.</p>
                 <a class="cta-link fz-16 spinach-color  fw-400" href="http://localhost/natural/2025/02/06/the-importance-of-shelf-life-dates-3/" target="_self">
                   Read more
                   <svg width="15" height="12" viewBox="0 0 15 12" fill="none" aria-hidden="true">
@@ -90,11 +93,11 @@ $cta_button = get_field('cta_button');
                     <path d="M9.66851 5.55855C5.83344 4.49656 6.12221 1.04972e-06 6.12221 1.04972e-06L3.67917 6.30837e-07C3.67917 2.4252 4.59022 3.79726 5.56415 4.57086C5.97118 4.8942 6.42825 5.14145 6.91367 5.30776L-7.06768e-07 3.96401L-1.27553e-06 7.15397L6.91367 5.81023C6.42825 5.97654 5.97162 6.22379 5.5646 6.54712C4.59022 7.32072 3.67961 8.69234 3.67961 11.118L6.12265 11.118C6.12265 11.118 5.83388 6.62143 9.66895 5.55943" fill="#1C301A"></path>
                   </svg>
                 </a>
-
+              
               </div>
             </div>
           </div>
-          <div class="accordion-panel" itemscope="" itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <div class="accordion-panel" data-tab="3" itemscope="" itemprop="mainEntity" itemtype="https://schema.org/Question">
             <div id="panel2-title" class="accordion-title">
               <button class="accordion-trigger medium" aria-expanded="false">
                 <span>Blanching</span>
@@ -109,7 +112,8 @@ $cta_button = get_field('cta_button');
             <div class="accordion-content" role="region" aria-labelledby="panel2-title">
               <div class="answer" itemscope="" itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
                 <p class="spacer"></p>
-                <p class="description">Flame grilling hearty veg to bring the smoky BBQ flavours consumers can’t get enough of.</p>
+                <p class="description">Flame grilling hearty veg to bring the smoky BBQ flavours consumers can’t get
+                  enough of.</p>
                 <a class="cta-link fz-16 spinach-color  fw-400" href="http://localhost/natural/2025/02/06/the-importance-of-shelf-life-dates-3/" target="_self">
                   Read more
                   <svg width="15" height="12" viewBox="0 0 15 12" fill="none" aria-hidden="true">
@@ -117,11 +121,11 @@ $cta_button = get_field('cta_button');
                     <path d="M9.66851 5.55855C5.83344 4.49656 6.12221 1.04972e-06 6.12221 1.04972e-06L3.67917 6.30837e-07C3.67917 2.4252 4.59022 3.79726 5.56415 4.57086C5.97118 4.8942 6.42825 5.14145 6.91367 5.30776L-7.06768e-07 3.96401L-1.27553e-06 7.15397L6.91367 5.81023C6.42825 5.97654 5.97162 6.22379 5.5646 6.54712C4.59022 7.32072 3.67961 8.69234 3.67961 11.118L6.12265 11.118C6.12265 11.118 5.83388 6.62143 9.66895 5.55943" fill="#1C301A"></path>
                   </svg>
                 </a>
-
+              
               </div>
             </div>
           </div>
-          <div class="accordion-panel" itemscope="" itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <div class="accordion-panel" data-tab="4" itemscope="" itemprop="mainEntity" itemtype="https://schema.org/Question">
             <div id="panel2-title" class="accordion-title">
               <button class="accordion-trigger medium" aria-expanded="false">
                 <span>Washing and Prepping</span>
@@ -142,6 +146,44 @@ $cta_button = get_field('cta_button');
           </div>
         </div>
       </div>
+      
+      <?php if (have_rows('accordion_repeater')) { ?>
+        <div class="right-content-wrapper">
+          <?php
+          $index = 1;
+          while (have_rows('accordion_repeater')) {
+            the_row();
+            $image = get_sub_field('image');
+            ?>
+            <?php if ($image) { ?>
+              <div class=" image-wrapper  <?= $index === 1 ? 'active' : '' ?>" data-content="<?= $index ?>">
+                <?php
+                $picture_class = 'aspect-ratio br-10';
+                echo bis_get_attachment_picture(
+                    $image,
+                    [
+                        375 => [156, 191, 1],
+                        1024 => [165, 202, 1],
+                        1280 => [208, 255, 1],
+                        1440 => [234, 287, 1],
+                        1920 => [314, 385, 1],
+                        3840 => [314, 385, 1]
+                    ],
+                    [
+                        'retina' => true, 'picture_class' => $picture_class,
+                    ],
+                );
+                ?>
+              </div>
+            <?php } ?>
+            <?php
+            $index++;
+          }
+          ?>
+        </div>
+      <?php } ?>
+    
+    
     </div>
   </div>
 </section>
