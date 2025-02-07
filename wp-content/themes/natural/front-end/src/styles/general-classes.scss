@@ -67,6 +67,11 @@
   padding-inline: 11px;
   height: 25px;
   width: fit-content;
+  
+  &.light {
+    color: $off-white-color;
+    border-color: $off-white-color;
+  }
 }
 
 .capital-text {
