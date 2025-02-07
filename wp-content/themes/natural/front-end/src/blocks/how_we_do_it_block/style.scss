@@ -1,10 +1,16 @@
 @import '../../styles/variables';
 
 .how_we_do_it_block {
-  padding-block: 40px 50px;
+  padding-block: 45px 50px;
+  
+  @include min-medium-screen {
+    padding-block: 40px 50px;
+  }
   
   .content-wrapper {
-    padding-block: 60px;
+    @include min-medium-screen {
+      padding-block: 60px;
+    }
     @include x-large-screen {
       padding-inline: 233px 97px;
       
@@ -17,7 +23,7 @@
     .main-title {
       color: $spinach;
       max-width: 663px;
-      margin-bottom: 18px;
+      margin-bottom: 10px;
       @include media-screen-768 {
         margin-bottom: 59px;
       }
@@ -47,13 +53,16 @@
       position: relative;
       cursor: pointer;
       background-color: #F4F3DD;
-      padding-block: 18px;
-      padding-inline: 19px 13px;
+      padding-block: 15px;
+      padding-inline: 16px 11px;
       border-radius: 15px;
       transition: background-color $duration;
       
       @include min-medium-screen {
         display: flex;
+        padding-block: 18px;
+        padding-inline: 19px 13px;
+        
       }
       
       .accordion-title {
@@ -65,17 +74,27 @@
         span {
           font-family: $tomato;
           color: $spinach;
-          font-size: 18px;
+          font-size: 16px;
           font-style: normal;
-          font-weight: 500;
-          line-height: 133.333%;
+          font-weight: 400;
+          line-height: 127.778%;
           transition: color $duration;
+          @include min-medium-screen {
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 133.333%;
+          }
         }
       }
       
       .answer {
-        width: 447px;
-        margin-right: 92px;
+        max-width: 300px;
+        @include min-medium-screen {
+          width: 447px;
+          max-width: 447px;
+          margin-right: 92px;
+        }
+        
         .description p {
           color: $off-white-color;
           font-family: $halyard;
@@ -83,37 +102,61 @@
           font-style: normal;
           font-weight: 300;
           line-height: 125%;
-          &:not(:last-child){
+          
+          &:not(:last-child) {
             margin-bottom: 19px;
           }
         }
         
         .spacer {
-          height: 4px;
+          height: 59px;
+          @include min-medium-screen {
+            height: 46px;
+          }
         }
+        
         .spacer-2 {
-          height: 46px;
+          display: none;
+          height: 3px;
+          @include min-medium-screen {
+            height: 46px;
+          }
         }
       }
       
       &.active {
-        background-color: $spinach;
+        background-color: $lime;
+        
+        @include min-medium-screen {
+          background-color: $spinach;
+        }
         
         .accordion-title span {
-          color: $off-white-color;
-        }
-  
-        .toggle-open {
-          border-color: $off-white-color;
-    
-          svg {
-            line {
-              stroke: $off-white-color !important;
-            }
+          @include min-medium-screen {
+            color: $off-white-color;
           }
-    
-          .vertical-line {
-            transform: scaleY(0);
+        }
+        
+        .description p {
+          color: $spinach;
+          @include min-medium-screen {
+            color: $off-white-color;
+          }
+        }
+        
+        .toggle-open {
+          @include min-medium-screen {
+            border-color: $off-white-color;
+            
+            svg {
+              line {
+                stroke: $off-white-color !important;
+              }
+            }
+            
+            .vertical-line {
+              transform: scaleY(0);
+            }
           }
         }
       }
@@ -127,6 +170,10 @@
       .icon-wrapper {
         width: 18px;
         height: 22px;
+        display: none;
+        @include min-medium-screen {
+          display: none;
+        }
         
         img, svg {
           width: 100%;
@@ -155,11 +202,13 @@
       border-radius: 50%;
       align-items: center;
       justify-content: center;
-      top: 18px;
-      right: 21px;
+      top: 10px;
+      right: 11px;
       @include media-screen-768 {
         width: 25px;
         height: 25px;
+        top: 18px;
+        right: 21px;
       }
       
       svg {
@@ -187,8 +236,6 @@
       justify-content: center;
       border-radius: 50%;
     }
-    
-
   }
 }
 
