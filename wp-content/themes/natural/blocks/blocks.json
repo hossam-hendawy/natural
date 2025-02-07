@@ -15,8 +15,12 @@
     "title": "Latest News Block",
     "status": true
   },
-  "image_and_text_block": {
-    "title": "Image And Text Block",
+  "who_we_are_block": {
+    "title": "Who We Are Block",
+    "status": true
+  },
+  "what_we_offer_block": {
+    "title": "What we offer Block",
     "status": true
   }
 }

@@ -1,6 +1,6 @@
 {
     "key": "group_67a39ae7cf52a",
-    "title": "Image And Text Block",
+    "title": "Who We Are Block",
     "fields": [
         {
             "key": "field_67a39ae7c7388",
@@ -114,7 +114,7 @@
             {
                 "param": "block",
                 "operator": "==",
-                "value": "acf\/image-and-text-block"
+                "value": "acf\/who-we-are-block"
             }
         ]
     ],
@@ -127,5 +127,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1738819679
+    "modified": 1738930788
 }
