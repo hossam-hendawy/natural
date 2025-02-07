@@ -33,7 +33,7 @@ $cta_button = get_field('cta_button');
     <div class="cards-wrapper">
       <div class="image-card">
         <?php
-        $picture_class = 'left-image aspect-ratio';
+        $picture_class = 'left-image aspect-ratio br-10';
         echo bis_get_attachment_picture(
             $image,
             [

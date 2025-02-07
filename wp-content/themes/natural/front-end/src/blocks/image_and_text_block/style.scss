@@ -1,19 +1,16 @@
 @import '../../styles/variables.scss';
 
 .image_and_text_block {
-  
-  padding-top: 22.5px;
-  padding-bottom: 37px;
+  padding-bottom: 40px;
   @include min-medium-screen {
-    padding-top: 20px;
-    padding-bottom: 27.5px;
+    padding-bottom: 80px;
   }
   
   .cards-wrapper {
     display: flex;
     flex-direction: column;
-    max-width: 1102px;
-    background: #00a0d2;
+    padding-block: 80px;
+    padding-inline: 80px 48px;
     padding-left: 80px;
     @include media-screen-768 {
       justify-content: space-between;
@@ -26,17 +23,12 @@
         width: 44%;
       }
       @include min-medium-screen {
-        width: 45%;
+        width: 47.13%;
       }
       
       .left-image {
-        padding-top: 90.25%;
-        
-        img {
-          border-radius: 10px;
-        }
+        padding-top: 100%;
       }
-      
     }
     
     .right-content {
@@ -54,18 +46,16 @@
         margin-top: 0;
       }
       @include min-medium-screen {
-        width: 44.69%;
-   
+        width: 42.8%;
       }
-  
-  
+      
       
       .label {
         margin-bottom: 20px;
       }
       
       .title {
-        margin-bottom: 142px;
+        margin-bottom: 123px;
       }
       
       .description {

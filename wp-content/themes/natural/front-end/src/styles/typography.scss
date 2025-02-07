@@ -2,21 +2,26 @@
 
 // region fonts here
 @font-face {
-  font-weight: 400;
-  font-family: 'Space Grotesk';
-  src: url('fonts/SpaceGrotesk-Regular.woff2') format('woff2');
-  //url('fonts/proximanova/proximanova_regular.woff') format('woff');
+  font-weight: 300;
+  font-family: 'Tomato Grotesk';
+  src: url('fonts/tomato-grotesk-light.woff2') format('woff2');
   font-style: normal;
 }
 
 @font-face {
-  font-weight: 500;
-  font-family: 'Space Grotesk';
-  src: url('fonts/SpaceGrotesk-Medium.woff2') format('woff2');
-  //url('fonts/proximanova/proximanova_regular.woff') format('woff');
+  font-weight: 400;
+  font-family: 'Tomato Grotesk';
+  src: url('fonts/tomato-grotesk-regular.woff2') format('woff2');
   font-style: normal;
 }
 
+
+@font-face {
+  font-weight: 500;
+  font-family: 'Tomato Grotesk';
+  src: url('fonts/tomato-grotesk-medium.woff2') format('woff2');
+  font-style: normal;
+}
 
 
 // endregion
@@ -26,7 +31,7 @@ html {
 }
 
 body {
-  font-family: $space_grotesk !important;
+  font-family: $tomato, sans-serif;
   color: $white-color;
   background-color: $off-white-color;
   position: relative;

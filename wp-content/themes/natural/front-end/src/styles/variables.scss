@@ -11,7 +11,8 @@ $lime: #96F56D;
 $spinach: #1C301A;
 
 
-$space_grotesk: 'Space Grotesk';
+$halyard: 'halyard-display';
+$tomato : 'Tomato Grotesk';
 
 
 $container-padding-mobile: 20px;
@@ -134,7 +135,7 @@ $xxx-large-screen-min-width: 2500px;
   min-height: 38px;
   border-radius: 8px;
   cursor: pointer;
-  font-family: $space_grotesk;
+  font-family: $tomato;
   color: $spinach;
   font-size: 14px;
   font-style: normal;
@@ -161,7 +162,7 @@ $xxx-large-screen-min-width: 2500px;
 
 @mixin star-style {
   color: $white-color;
-  font-family: $space_grotesk;
+  font-family: $tomato;
   font-size: size(16);
   font-style: normal;
   font-weight: 700;
