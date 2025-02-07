@@ -3,8 +3,10 @@
 .who_we_are_block {
   background: $off-white-color;
   padding-bottom: 40px;
+  padding-top: 35px;
   @include min-medium-screen {
     padding-bottom: 80px;
+    padding-top: 20px;
   }
   
   .cards-wrapper {

@@ -2,26 +2,25 @@
 
 .what_we_offer_block {
   background-color: $spinach;
-  
+ 
   .content-wrapper {
     background-color: $spinach;
     padding-block: 55px;
-    
     display: flex;
     flex-direction: column-reverse;
     @include media-screen-768 {
-      padding-block: 80px;
-      padding-inline: 117px 80px;
       flex-direction: row;
       justify-content: space-between;
+      gap:20px;
+    }
+    @include x-large-screen {
+      padding-block: 80px;
+      padding-inline: 117px 80px;
     }
     
     .left-content-wrapper {
       width: 100%;
       margin-top: 24px;
-      @include media-screen-600 {
-        width: 376px;
-      }
       @include media-screen-768 {
         width: 50%;
         margin-top: 0;
@@ -43,7 +42,6 @@
         }
       }
       
-      
       .accordion-content {
         display: grid;
         grid-template-rows: 0fr;
@@ -57,7 +55,6 @@
       .accordion-content > div {
         overflow: hidden;
       }
-      
       
       .accordion {
         max-width: 405px;
@@ -117,7 +114,6 @@
           }
         }
       }
-      
       
       .accordion-trigger {
         background-color: transparent;
@@ -212,9 +208,6 @@
     
     .right-content-wrapper {
       width: 100%;
-      @include media-screen-600 {
-        width: 376px;
-      }
       @include media-screen-768 {
         width: 50%;
         margin-top: 0;
