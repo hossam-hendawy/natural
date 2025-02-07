@@ -64,9 +64,10 @@ h2, .natural-h2, .natural-h2 p {
   font-family: inherit;
   font-size: 40px;
   font-weight: 400;
-  line-height: 100%;
+  line-height: 105%;
   @include min-medium-screen {
     font-size: 72px;
+    line-height: 100%;
   }
 }
 

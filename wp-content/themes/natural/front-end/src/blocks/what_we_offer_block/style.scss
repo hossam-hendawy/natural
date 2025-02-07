@@ -1,14 +1,17 @@
 @import '../../styles/variables';
 
 .what_we_offer_block {
+  background-color: $spinach;
   
   .content-wrapper {
     background-color: $spinach;
-    padding-block: 80px;
-    padding-inline: 117px 80px;
+    padding-block: 55px;
+    
     display: flex;
     flex-direction: column-reverse;
     @include media-screen-768 {
+      padding-block: 80px;
+      padding-inline: 117px 80px;
       flex-direction: row;
       justify-content: space-between;
     }
@@ -34,7 +37,10 @@
       
       .main-title {
         color: $off-white-color;
-        margin-bottom: 48px;
+        margin-bottom: 18px;
+        @include media-screen-768 {
+          margin-bottom: 48px;
+        }
       }
       
       
@@ -63,7 +69,7 @@
       .accordion-panel {
         cursor: pointer;
         background-color: #273A24;
-        padding-block: 12px 13px;
+        padding-block: 13px 13px;
         padding-inline: 19px 13px;
         border-radius: 15px;
         transition: background-color $duration;
@@ -129,13 +135,17 @@
         transform: translateY(-50%);
         display: flex;
         transition: transform $duration, border-color $duration;
-        width: 25px;
-        height: 25px;
+        width: 30px;
+        height: 30px;
         border: 1px solid $off-white-color;
         border-radius: 50%;
         align-items: center;
         justify-content: center;
         
+        @include media-screen-768 {
+          width: 25px;
+          height: 25px;
+        }
         svg {
           width: 11px;
           height: 11px;
@@ -202,7 +212,6 @@
     
     .right-content-wrapper {
       width: 100%;
-      margin-top: 24px;
       @include media-screen-600 {
         width: 376px;
       }
