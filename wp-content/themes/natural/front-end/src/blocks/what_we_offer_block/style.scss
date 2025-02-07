@@ -2,7 +2,6 @@
 
 .what_we_offer_block {
   
-  
   .content-wrapper {
     background-color: $spinach;
     padding-block: 80px;
@@ -216,6 +215,9 @@
       }
       
       .image-wrapper {
+        animation: fadeIn 500ms;
+        transition: opacity 500ms;
+        
         display: none;
         
         .aspect-ratio {
@@ -227,10 +229,20 @@
         }
         
       }
+  
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: scale(0);
+      
+        }
+        to {
+          opacity: 1;
+          transform: scale(1);
+      
+        }
+      }
     }
-    
   }
-  
-  
 }
 
