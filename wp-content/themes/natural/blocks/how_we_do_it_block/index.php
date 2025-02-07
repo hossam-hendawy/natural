@@ -32,7 +32,7 @@ $cta_button = get_field('cta_button');
   <div class="container">
     <div class="content-wrapper">
         <?php if ($label) { ?>
-          <h2 class="label light fz-14 fw-400"><?= $label ?></h2>
+          <h2 class="label fz-14 fw-400"><?= $label ?></h2>
         <?php } ?>
         <?php if ($main_title) { ?>
           <h2 class="main-title natural-h2 fw-400 lh-72"><?= $main_title ?></h2>
