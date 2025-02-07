@@ -44,12 +44,18 @@ h1, .natural-h1, .natural-h1 p {
   font-size: 40px;
   font-weight: 400;
   line-height: 105%;
-  @include min-medium-screen {
+  @include min-medium-screen{
+    font-size: 60px;
+  }
+  @include large-screen {
     font-size: 80px;
   }
   
   &.lh-72 {
-    line-height: 90%;
+    line-height: 105%;
+    @include large-screen {
+      line-height: 90%;
+    }
   }
 }
 

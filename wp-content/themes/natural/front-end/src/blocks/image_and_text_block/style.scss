@@ -1,6 +1,7 @@
 @import '../../styles/variables.scss';
 
 .image_and_text_block {
+  background: $off-white-color;
   padding-bottom: 40px;
   @include min-medium-screen {
     padding-bottom: 80px;
@@ -9,13 +10,15 @@
   .cards-wrapper {
     display: flex;
     flex-direction: column;
-    padding-block: 80px;
-    padding-inline: 80px 48px;
-    padding-left: 80px;
     @include media-screen-768 {
       justify-content: space-between;
       flex-direction: row;
     }
+    @include x-large-screen {
+      padding-block: 80px;
+      padding-inline: 80px 48px;
+    }
+    
     
     .image-card {
       width: 100%;
@@ -36,7 +39,6 @@
       display: flex;
       flex-direction: column;
       margin-top: 20px;
-      padding-block: 13px 9px;
       
       @include media-screen-600 {
         width: 376px;
@@ -44,9 +46,11 @@
       @include media-screen-768 {
         width: 50%;
         margin-top: 0;
+        
       }
       @include min-medium-screen {
         width: 42.8%;
+        padding-block: 13px 9px;
       }
       
       
@@ -55,15 +59,37 @@
       }
       
       .title {
-        margin-bottom: 123px;
+        margin-bottom: 83px;
+        max-width: 370px;
+        @include media-screen-768 {
+          max-width: 313px;
+          margin-bottom: 52px;
+        }
+        
+        @include large-screen {
+          max-width: 90%;
+          margin-bottom: 123px;
+        }
+        @include x-large-screen {
+          max-width: 100%;
+        }
       }
       
       .description {
-        max-width: 443px;
+        max-width: 421px;
       }
       
       .cta-button {
-        margin-top: 40px;
+        margin-top: 20px;
+        width: 100%;
+        font-size: 16px;
+        min-height: 50px;
+        @include media-screen-768 {
+          margin-top: 40px;
+          font-size: 14px;
+          width: fit-content;
+          min-height: 38px;
+        }
       }
       
     }
