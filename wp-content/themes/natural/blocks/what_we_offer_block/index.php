@@ -65,7 +65,7 @@ $cta_button = get_field('cta_button');
                     <p class="spacer"></p>
                     <div class="description"><?= $description ?></div>
                     <?php if (!empty($cta_link) && is_array($cta_link)): ?>
-                      <a class="cta-link fz-16 spinach-color fw-400" href="<?php echo esc_url($cta_link['url']); ?>" target="<?php echo esc_attr($cta_link['target']); ?>">
+                      <a class="cta-link fz-14 spinach-color fw-400" href="<?php echo esc_url($cta_link['url']); ?>" target="<?php echo esc_attr($cta_link['target']); ?>">
                         <?php echo esc_html($cta_link['title']); ?>
                         <svg width="15" height="12" viewBox="0 0 15 12" fill="none" aria-hidden="true">
                           <path d="M11.0332 4.18271e-07L8.59375 0C8.59375 2.4252 9.50345 3.79726 10.476 4.57086C11.287 5.21576 12.2971 5.55899 13.3333 5.55899C12.2971 5.55899 11.287 5.90178 10.476 6.54712C9.50301 7.32072 8.59375 8.69234 8.59375 11.118L11.0332 11.118C11.0332 11.118 10.7448 6.62143 14.5743 5.55943C10.7448 4.49656 11.0332 4.18271e-07 11.0332 4.18271e-07Z" fill="#1C301A"></path>
