@@ -57,7 +57,7 @@
       padding-inline: 16px 11px;
       border-radius: 15px;
       transition: background-color $duration;
-      
+      justify-content: space-between;
       @include min-medium-screen {
         display: flex;
         padding-block: 18px;
@@ -69,8 +69,11 @@
         position: relative;
         display: flex;
         align-items: flex-start;
-        width: 500px;
+        max-width: 279px;
         
+        @include min-medium-screen{
+          width: 500px;
+        }
         span {
           font-family: $tomato;
           color: $spinach;
@@ -111,12 +114,11 @@
         .spacer {
           height: 59px;
           @include min-medium-screen {
-            height: 46px;
+            height: 6px;
           }
         }
         
         .spacer-2 {
-          display: none;
           height: 3px;
           @include min-medium-screen {
             height: 46px;
@@ -172,7 +174,8 @@
         height: 22px;
         display: none;
         @include min-medium-screen {
-          display: none;
+          display: flex;
+          flex-shrink: 0;
         }
         
         img, svg {
