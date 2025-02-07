@@ -6,6 +6,7 @@ import {home_here_block} from './home_here_block';
 import {latest_news_block} from './latest_news_block';
 import {who_we_are_block} from './who_we_are_block';
 import {what_we_offer_block} from './what_we_offer_block';
+import {how_we_do_it_block} from './how_we_do_it_block';
 
 export function indexBlocks() {
   headerBlock()
@@ -15,5 +16,6 @@ export function indexBlocks() {
   latest_news_block()
   who_we_are_block()
   what_we_offer_block()
+  how_we_do_it_block()
 }
 

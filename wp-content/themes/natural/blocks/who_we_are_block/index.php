@@ -26,7 +26,6 @@ $label = get_field('label');
 $title = get_field('title');
 $description = get_field('description');
 $cta_button = get_field('cta_button');
-
 ?>
 <section id="<?= esc_attr($id) ?>" class="<?= esc_attr($className) ?>">
   <div class="container">

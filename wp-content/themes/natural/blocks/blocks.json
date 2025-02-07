@@ -22,5 +22,9 @@
   "what_we_offer_block": {
     "title": "What we offer Block",
     "status": true
+  },
+  "how_we_do_it_block": {
+    "title": "How We Do It Block",
+    "status": true
   }
 }
