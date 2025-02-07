@@ -1,6 +1,7 @@
 @import '../../styles/variables.scss';
 
 .home_here_block {
+  background-color: $spinach;
   @include max-screen-768 {
     height: 100vh;
   }

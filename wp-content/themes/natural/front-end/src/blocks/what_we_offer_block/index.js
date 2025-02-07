@@ -36,8 +36,8 @@ export function what_we_offer_block() {
   
   
   
-    const panels = document.querySelectorAll(".accordion-panel");
-    const images = document.querySelectorAll(".right-content-wrapper .image-wrapper");
+    const panels = blockSelector.querySelectorAll(".accordion-panel");
+    const images = blockSelector.querySelectorAll(".right-content-wrapper .image-wrapper");
     
     panels.forEach(panel => {
       panel.addEventListener("click", function () {
@@ -51,7 +51,7 @@ export function what_we_offer_block() {
         this.classList.add("active");
         
         // Find corresponding image and add "active" class
-        const targetImage = document.querySelector(`.right-content-wrapper .image-wrapper[data-content="${tabNumber}"]`);
+        const targetImage = blockSelector.querySelector(`.right-content-wrapper .image-wrapper[data-content="${tabNumber}"]`);
         if (targetImage) {
           targetImage.classList.add("active");
         }

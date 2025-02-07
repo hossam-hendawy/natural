@@ -6,7 +6,7 @@
   .container {
     padding: 0;
     @include media-screen-600 {
-      padding: $container-padding-tablet;
+      padding-inline: $container-padding-tablet;
     }
   }
   .image-wrapper {

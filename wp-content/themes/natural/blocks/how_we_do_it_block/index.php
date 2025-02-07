@@ -30,9 +30,7 @@ $cta_button = get_field('cta_button');
 ?>
 <section id="<?= esc_attr($id) ?>" class="<?= esc_attr($className) ?>">
   <div class="container">
-    <div class="content-wrapper br-10">
-      <!--       Left Content Wrapper -->
-      <div class="left-content-wrapper">
+    <div class="content-wrapper">
         <?php if ($label) { ?>
           <h2 class="label light fz-14 fw-400"><?= $label ?></h2>
         <?php } ?>
@@ -79,45 +77,6 @@ $cta_button = get_field('cta_button');
             <?php endwhile; ?>
           </div>
         <?php endif; ?>
-      </div>
-      <!--       right content wrapper-->
-      <?php if (have_rows('accordion_repeater')) { ?>
-        <div class="right-content-wrapper">
-          <?php
-          $index = 1;
-          while (have_rows('accordion_repeater')) {
-            the_row();
-            $image = get_sub_field('image');
-            ?>
-            <?php if ($image) { ?>
-              <div class=" image-wrapper  <?= $index === 1 ? 'active' : '' ?>" data-content="<?= $index ?>">
-                <?php
-                $picture_class = 'aspect-ratio br-10';
-                echo bis_get_attachment_picture(
-                    $image,
-                    [
-                        375 => [335, 335, 1],
-                        600 => [560, 560, 1],
-                        768 => [344, 344, 1],
-                        992 => [456, 456, 1],
-                        1024 => [481, 481, 1],
-                        1280 => [609, 609, 1],
-                        1440 => [590, 590, 1],
-                        1920 => [560, 560, 1]
-                    ],
-                    [
-                        'retina' => true, 'picture_class' => $picture_class,
-                    ],
-                );
-                ?>
-              </div>
-            <?php } ?>
-            <?php
-            $index++;
-          }
-          ?>
-        </div>
-      <?php } ?>
     </div>
   </div>
 </section>
