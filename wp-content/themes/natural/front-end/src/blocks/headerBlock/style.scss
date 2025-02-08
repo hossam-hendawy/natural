@@ -205,7 +205,7 @@ header {
     overflow: scroll;
     display: flex;
     flex-direction: column;
-    padding-block: 80px;
+    padding-block: 204px 22px;
     padding-inline: 20px;
     @include min-medium-screen {
       display: flex;
@@ -222,8 +222,7 @@ header {
   .primary-menu {
     display: flex;
     flex-direction: column;
-    gap: 15px;
-    
+    gap: 17px;
     @include min-medium-screen {
       align-items: center;
       flex-direction: row;
@@ -241,7 +240,7 @@ header {
       font-size: 44px;
       font-style: normal;
       font-weight: 400;
-      line-height: 41.8px;
+      line-height: 95%;
       @include min-medium-screen {
         font-size: 14px;
         font-weight: 500;
