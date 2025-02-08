@@ -3,10 +3,13 @@
 .instagram_slider_block {
   padding-block: 40px 21px;
   background-color: $off-white-color;
-  
   @include min-medium-screen {
     padding-block: 15px 47px;
     border-radius: 0 0 10px 10px;
+  }
+  
+  .container{
+    padding-inline: 0;
   }
   
   .insta-icon {
@@ -23,7 +26,6 @@
       height: 100%;
     }
   }
-  
   
   .swiper-slide {
     width: 220px !important;
