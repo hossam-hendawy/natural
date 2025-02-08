@@ -1,6 +1,59 @@
 @import '../../styles/variables';
 
 .get_started_block {
-
+  padding-block: 50px 15px;
+  
+  .content-wrapper {
+    background-color: $spinach;
+    padding-block: 25px;
+    padding-inline: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 35px;
+    @include media-screen-600 {
+      flex-direction: row;
+      align-items: center;
+    }
+    @include min-medium-screen {
+      padding-block: 40px 48px;
+      padding-inline: 57px;
+    }
+    
+    .main-title {
+      color: $lime;
+      max-width: 310px;
+      
+      @include min-medium-screen {
+        max-width: 516px;
+      }
+    }
+    
+    .cta-wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      
+      .cta-button {
+        position: relative;
+        border-radius: 100px;
+        min-width: 175px;
+        
+        .circle-arrow {
+          position: absolute;
+          width: 33px;
+          height: 33px;
+          top: 50%;
+          transform: translateY(-50%);
+          left: 3px;
+        }
+        
+        &:hover {
+          color: $spinach;
+          background-color: $off-white-color;
+        }
+      }
+    }
+  }
 }
 

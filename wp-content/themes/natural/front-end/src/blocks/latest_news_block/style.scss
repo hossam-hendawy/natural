@@ -3,10 +3,10 @@
 .latest_news_block {
   position: relative;
   z-index: 2;
-  padding-block: 40px 40px;
+  padding-block: 40px 50px;
   
   @include min-medium-screen{
-    padding-block: 50px 40px;
+    padding-block: 50px 50px;
   }
   .container {
     @include x-large-screen {

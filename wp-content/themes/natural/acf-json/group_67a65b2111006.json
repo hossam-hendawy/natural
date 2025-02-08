@@ -1,6 +1,6 @@
 {
     "key": "group_67a65b2111006",
-    "title": "Get Started Block",
+    "title": "get_started_block",
     "fields": [
         {
             "key": "field_67a65b217b2ab",
@@ -28,7 +28,7 @@
             "label": "First CTA",
             "name": "first_cta",
             "aria-label": "",
-            "type": "text",
+            "type": "link",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -37,19 +37,15 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "",
-            "maxlength": "",
-            "allow_in_bindings": 0,
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
+            "return_format": "array",
+            "allow_in_bindings": 1
         },
         {
             "key": "field_67a65b4a7b2ad",
             "label": "Second CTA",
             "name": "second_cta",
             "aria-label": "",
-            "type": "text",
+            "type": "link",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -58,12 +54,8 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "",
-            "maxlength": "",
-            "allow_in_bindings": 0,
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
+            "return_format": "array",
+            "allow_in_bindings": 1
         }
     ],
     "location": [
@@ -84,5 +76,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1738955607
+    "modified": 1738990556
 }
