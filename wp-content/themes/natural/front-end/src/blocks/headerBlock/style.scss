@@ -35,9 +35,16 @@ header {
     align-items: center;
     width: 173px;
     height: 40px;
-    @include large-screen {
-      width: 433px;
+    
+    @include min-medium-screen {
+      width: 303px;
       height: 78.752px;
+    }
+    @include large-screen {
+      width: 350px;
+    }
+    @include x-large-screen {
+      width: 433px;
     }
     
     picture {
@@ -64,7 +71,7 @@ header {
   // burger menu
   .burger-menu {
     width: 20px;
-    height: 14px;
+    height: 20px;
     z-index: 10;
     cursor: pointer;
     transform: translate3d(0, 0, 0);
@@ -72,16 +79,23 @@ header {
     border: none;
     background: transparent;
     padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+    @include min-medium-screen {
+      display: none;
+    }
     
     &:focus {
       outline: none !important;
     }
     
-    span {
+    div {
+      flex-shrink: 0;
       display: block;
       width: 100%;
-      height: 3px;
-      margin-bottom: 3px;
+      height: 2px;
       position: relative;
       z-index: 1;
       transition: color $duration;
@@ -98,7 +112,6 @@ header {
         opacity: .99;
         transition: background-color $duration;
         display: table;
-        border-radius: 10px;
       }
       
       &:nth-of-type(even) {
@@ -127,19 +140,11 @@ header {
         transition: transform .6s cubic-bezier(.165, .84, .44, 1);
       }
       
-      &:last-child {
-        margin: 0 auto;
-      }
-      
-      &:first-child {
-        margin: 0 auto 3px;
-      }
+      margin: 0 auto;
     }
     
-    display: none;
-    
     &:hover {
-      span {
+      div {
         
         &:nth-of-type(even) {
           &:before {
@@ -165,11 +170,12 @@ header {
         
       }
     }
-    
-    @media screen and (max-width: 767.8px) {
-      display: block;
+  }
+  
+  .burger-menu-active {
+    div {
+      color: $lime;
     }
-    
   }
   
   // links
@@ -178,8 +184,7 @@ header {
     align-items: center;
     flex-direction: row;
     margin-left: auto;
-    
-    @media screen and (max-width: 767.8px) {
+    @include max-medium-screen {
       position: fixed;
       top: 0;
       left: 0;
@@ -187,6 +192,7 @@ header {
       width: 100%;
       transition: transform 300ms ease-in;
     }
+    
     
     &.header-links-active {
       transform: translateX(0);
@@ -211,12 +217,15 @@ header {
     @include min-medium-screen {
       display: flex;
       flex-direction: row;
-      gap: 40px;
+      gap: 30px;
       padding: 0;
       background-color: transparent;
       width: auto;
       height: auto;
       overflow: visible;
+    }
+    @include large-screen{
+      gap: 40px;
     }
   }
   
@@ -228,8 +237,11 @@ header {
     @include min-medium-screen {
       align-items: center;
       flex-direction: row;
-      gap: 40px;
+      gap: 30px;
       margin-bottom: 0;
+    }
+    @include large-screen{
+      gap: 40px;
     }
   }
   
@@ -279,24 +291,6 @@ header {
       }
     }
     
-    .cta-button {
-      padding-inline: 20px;
-      min-width: 190px;
-      font-size: 16px;
-      padding-block: 12px;
-      @media screen and (min-width: 768px) {
-        min-width: 140px;
-      }
-      @include min-medium-screen {
-        min-width: 150px;
-        font-size: 24px;
-      }
-      @include xx-large-screen {
-        min-width: 180px;
-        padding: 19px 34.9px;
-      }
-    }
-    
     &.menu-item-has-children {
       
       .arrow {
@@ -330,19 +324,13 @@ header {
         }
       }
       
-      @include media-screen-768 {
-        &:hover {
-          .sub-menu {
-            opacity: 1;
-            pointer-events: auto;
-          }
-        }
-      }
     }
   }
   
   .bottom-content {
     display: block;
+    max-width: 400px;
+    margin-inline: auto;
     @include min-medium-screen {
       display: none;
     }
@@ -354,7 +342,6 @@ header {
       gap: 10px;
       margin-bottom: 21px;
     }
-    
     
     .bottom-links {
       display: flex;
@@ -456,5 +443,14 @@ header {
     }
   }
   
-  
+  &.header-active {
+    .main-logo {
+      svg {
+        path {
+          fill: $lime;
+        }
+      }
+    }
+    
+  }
 }

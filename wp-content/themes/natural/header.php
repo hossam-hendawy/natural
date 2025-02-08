@@ -50,11 +50,11 @@ $linkedin_url = get_field('linkedin_url', 'options');
     
     </a>
     <!-- burger menu and cross-->
-    <button aria-label="Open Menu Links" class="burger-menu hide-only-lg">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
+    <div role="button" aria-label="Open Menu Links" class="burger-menu hide-only-lg">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
     <!--     links  -->
     <nav class="navbar">
       <div class="navbar-wrapper">

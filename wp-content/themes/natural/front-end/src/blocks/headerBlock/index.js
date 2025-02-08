@@ -12,7 +12,7 @@ export function headerBlock() {
   
   if (!burgerMenu) return;
   const burgerTl = gsap.timeline({paused: true});
-  const burgerSpans = burgerMenu.querySelectorAll('span');
+  const burgerSpans = burgerMenu.querySelectorAll('div');
   gsap.set(burgerSpans, {transformOrigin: 'center'});
   burgerTl
       .to(burgerSpans, {
