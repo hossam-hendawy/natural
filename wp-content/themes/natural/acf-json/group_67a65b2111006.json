@@ -1,6 +1,6 @@
 {
     "key": "group_67a65b2111006",
-    "title": "get_started_block",
+    "title": "Get Started Block",
     "fields": [
         {
             "key": "field_67a65b217b2ab",
@@ -76,5 +76,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1738990556
+    "modified": 1739014052
 }
