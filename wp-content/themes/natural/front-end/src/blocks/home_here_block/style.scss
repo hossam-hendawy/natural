@@ -6,7 +6,11 @@
     height: 100vh;
   }
   
-  @include media-screen-768 {
+  @include media-screen-768{
+    padding-block: 150px 94px;
+  }
+  
+  @include min-medium-screen {
     padding-block: 236px 94px;
   }
   
