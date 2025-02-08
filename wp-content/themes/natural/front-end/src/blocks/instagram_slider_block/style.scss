@@ -1,0 +1,105 @@
+@import '../../styles/variables.scss';
+
+.instagram_slider_block {
+  position: relative;
+  z-index: 2;
+  padding-block: 40px 50px;
+  
+  @include min-medium-screen{
+    padding-block: 50px 50px;
+  }
+  .container {
+    @include x-large-screen {
+      padding-inline: 50px;
+    }
+  }
+  
+  .title {
+    color: $spinach;
+  }
+  
+  .top-content-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    border-top: 0.5px solid $spinach;
+    padding-top: 20px;
+    @include media-screen-768 {
+      padding-top: 0;
+      border-top: none;
+    }
+    @include min-medium-screen {
+      margin-bottom: 48px;
+    }
+  }
+  
+  .news-card {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 30px;
+    border-bottom: 0.5px solid $spinach;
+
+    @include media-screen-600 {
+      height: auto;
+      padding-bottom: 25px;
+    }
+    
+    .image-wrapper {
+      padding-top: 100%;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    
+    .project-links {
+      padding: 0 20px;
+    }
+    
+    .post-title {
+      margin-block: 20px 22px;
+    }
+    
+    .location {
+      display: flex;
+      align-items: center !important;
+      
+      svg {
+        flex-shrink: 0;
+        width: 12px;
+        height: 13px;
+        margin-right: 3px;
+        
+        path {
+          fill: currentColor;
+        }
+      }
+    }
+    
+    .post-title, .location {
+      transition: color $duration;
+      display: flex;
+    }
+    
+    
+    .project-info {
+      padding: 0 20px 30px;
+      
+      .body-2 {
+        @include small-screen {
+          font-size: 13px;
+        }
+      }
+    }
+  }
+  
+  .swiper-navigations {
+    display: none;
+    @include media-screen-768 {
+      display: flex;
+    }
+  }
+  
+  .cta-link {
+    margin-top: auto;
+  }
+}
