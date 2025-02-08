@@ -34,5 +34,9 @@
   "instagram_slider_block": {
     "title": "Instagram Slider Block",
     "status": true
+  },
+  "text_slider_block": {
+    "title": "Text Slider Block",
+    "status": true
   }
 }

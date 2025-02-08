@@ -9,6 +9,7 @@ import {what_we_offer_block} from './what_we_offer_block';
 import {how_we_do_it_block} from './how_we_do_it_block';
 import {get_started_block} from './get_started_block';
 import {instagram_slider_block} from './instagram_slider_block';
+import {text_slider_block} from './text_slider_block';
 
 export function indexBlocks() {
   headerBlock()
@@ -21,5 +22,6 @@ export function indexBlocks() {
   how_we_do_it_block()
   get_started_block()
   instagram_slider_block()
+  text_slider_block()
 }
 
