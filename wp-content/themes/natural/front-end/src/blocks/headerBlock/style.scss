@@ -348,7 +348,7 @@ header {
     gap: 10px;
   }
   
-  .contactUS-btn {
+  .contactUS-btn, .join-us-btn {
     background-color: transparent;
     color: $lime;
     font-size: 14px;
@@ -374,6 +374,16 @@ header {
     &:hover {
       color: $spinach;
       background-color: $lime;
+    }
+  }
+  
+  .join-us-btn {
+    color: $spinach;
+    background-color: $lime;
+    
+    &:hover {
+      color: $lime;
+      background-color: transparent;
     }
   }
   

@@ -92,7 +92,7 @@ $linkedin_url = get_field('linkedin_url', 'options');
               <a class="cta-button contactUS-btn mobile-only" href="<?= $contact_us['url'] ?>" target="<?= $contact_us['target'] ?>"><?= $contact_us['title'] ?></a>
             <?php } ?>
             <?php if (!empty($join_us) && is_array($join_us)) { ?>
-              <a class="cta-button contactUS-btn mobile-only" href="<?= $join_us['url'] ?>" target="<?= $join_us['target'] ?>"><?= $join_us['title'] ?></a>
+              <a class="cta-button join-us-btn mobile-only" href="<?= $join_us['url'] ?>" target="<?= $join_us['target'] ?>"><?= $join_us['title'] ?></a>
             <?php } ?>
           </div>
           <div class="social-icons">
