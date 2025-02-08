@@ -2,14 +2,15 @@
 
 .who_we_are_block {
   background: $off-white-color;
-  padding-bottom: 40px;
-  padding-top: 20px;
+  padding-block: 20px 40px;
   
   @include min-medium-screen {
-    padding-bottom: 80px;
-    padding-top: 0;
+    padding-block: 40px 80px;
   }
   
+  @include x-large-screen{
+    padding-top: 0;
+  }
   .cards-wrapper {
     display: flex;
     flex-direction: column;

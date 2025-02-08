@@ -2,11 +2,13 @@
 
 .text_slider_block {
   padding-block: 17px 20px;
-  
   @include min-medium-screen {
     padding-top: 20px;
   }
   
+  .container{
+    padding-inline: 0;
+  }
   .swiper-slide {
     width: fit-content !important;
   }
