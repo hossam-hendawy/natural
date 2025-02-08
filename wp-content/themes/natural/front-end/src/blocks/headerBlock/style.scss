@@ -1,7 +1,7 @@
 @import '../../styles/variables.scss';
 
 header {
-  position: fixed;
+  position: absolute;
   width: 100%;
   top: 0;
   left: 0;
@@ -16,42 +16,28 @@ header {
   // header
   .header-wrapper {
     display: flex;
-    align-items: center;
     justify-content: space-between;
     padding: 20px 20px;
     width: 100%;
     position: relative;
-    @include large-screen {
-      padding: 25px 30px;
-    }
-    @include x-large-screen {
-      padding: 31px 30px;
-    }
-    @include media-screen-from-2500 {
-      padding-inline: 150px;
+    @include min-medium-screen {
+      padding: 30px 30px;
     }
   }
   
   // logo
   .main-logo {
+    position: relative;
+    background-size: contain;
+    transition: background-color 500ms;
     z-index: 90;
     display: flex;
     align-items: center;
     width: 170px;
     height: 40px;
     @include large-screen {
-      width: 210px;
-    }
-    @include x-large-screen {
-      width: 230px;
-      height: 58px;
-    }
-    @include xx-large-screen {
-      width: 320px;
-    }
-    @include media-screen-from-2500 {
-      width: 453px;
-      height: 88px;
+      width: 433px;
+      height: 78.752px;
     }
     
     picture {
@@ -214,11 +200,11 @@ header {
     padding-block: 80px;
     padding-inline: 20px;
     @include min-medium-screen {
+      display: flex;
+      flex-direction: row;
+      gap: 40px;
       padding: 0;
-    }
-    @media screen and (min-width: 768px) {
       background-color: transparent;
-      padding: 0;
       width: auto;
       height: auto;
       overflow: visible;
@@ -229,17 +215,31 @@ header {
     display: flex;
     flex-direction: column;
     gap: 15px;
-    @media screen and (min-width: 768px) {
+    
+    @include min-medium-screen {
       align-items: center;
       flex-direction: row;
-    }
-    @include xx-large-screen {
       gap: 40px;
     }
   }
   
   .menu-item {
     position: relative;
+    
+    .header-link {
+      text-transform: capitalize;
+      color: $lime;
+      font-family: $tomato;
+      font-size: 44px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 41.8px;
+      @include min-medium-screen {
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 100%;
+      }
+    }
     
     .cta-button {
       padding-inline: 20px;
@@ -303,183 +303,20 @@ header {
     }
   }
   
-  .sub-menu, .inner-sub-menu {
-    width: 100%;
-    @include media-screen-768 {
-      width: 300px;
-      border: 1px solid $spinach;
-      background-color: $lime;
-      border-radius: 8px;
-      &:after {
-        content: "";
-        position: absolute;
-        bottom: 100%;
-        width: 100%;
-        height: 32px;
-        background-color: transparent;
-      }
-      
-    }
-    @include large-screen {
-      width: 320px;
-    }
-    @include x-large-screen {
-      width: 375px;
-    }
-  }
   
-  .sub-menu {
-    height: 0;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
+  .contactUS-btn {
+    background-color: transparent;
+    color: $lime;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%;
+    min-width: 120px;
+    border: 1px solid $lime;
     
-    @include media-screen-768 {
-      height: auto;
-      overflow: visible;
-      position: absolute;
-      top: calc(100% + 17px);
-      right: 0;
-      opacity: 0;
-      transition: opacity $duration;
-      pointer-events: none;
-    }
-    
-    .box-wrapper {
-      background-color: transparent !important;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 12px;
-      min-height: 64px;
-      position: relative;
-      cursor: pointer;
-      
-      &:not(:last-child) {
-        border-bottom: 1px solid $spinach;
-      }
-      
-      &.main-select {
-        margin-top: 15px;
-        @include media-screen-768 {
-          margin-top: 0;
-        }
-      }
-      
-      .tax-name-and-arrow {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        width: 100%;
-        
-        @include max-screen-768 {
-          &.active {
-            @include max-screen-768 {
-              .arrow-in-sub-menu {
-                transform: rotate(90deg) scale(-1);
-              }
-            }
-          }
-        }
-      }
-      
-      .tax-name {
-        transition: color $duration;
-      }
-      
-      .checkbox {
-        background: transparent;
-        border: 1.5px solid $spinach;
-        border-radius: 3px;
-        flex-shrink: 0;
-        justify-content: center;
-        align-items: center;
-        width: 22px;
-        height: 22px;
-        transition: background $duration, border-color $duration;
-        display: flex;
-        
-        svg {
-          opacity: 0;
-          width: 10px;
-          height: 18px;
-          transition: opacity .6s;
-          
-          path {
-            stroke: $lime;
-          }
-        }
-      }
-      
-      .arrow-in-sub-menu {
-        width: 24px;
-        height: 24px;
-        transform: rotate(90deg);
-        transition: transform $duration;
-        
-        @include media-screen-768 {
-          transform: rotate(0);
-        }
-        path {
-          stroke: $spinach;
-        }
-      }
-      
-      &.active {
-        .tax-name {
-          color: $spinach;
-        }
-        
-        .checkbox {
-          background-color: $spinach;
-          border-color: $spinach;
-        }
-        
-        .arrow {
-          path {
-            stroke: $spinach;
-          }
-        }
-        
-        svg {
-          opacity: 1;
-        }
-      }
-      
-      &.has-sub-menu {
-        position: relative;
-        display: flex;
-        flex-wrap: wrap;
-        
-        .inner-sub-menu {
-          .box-wrapper {
-            @include max-screen-768 {
-              padding-inline: 0;
-            }
-          }
-          
-          @include max-screen-768 {
-            height: 0;
-            overflow: hidden;
-          }
-          @include media-screen-768 {
-            position: absolute;
-            height: auto !important;
-            right: 100%;
-            top: 1px;
-            opacity: 0;
-            transition: opacity $duration;
-          }
-        }
-        
-        &:hover {
-          .inner-sub-menu {
-            opacity: 1;
-            z-index: 22;
-          }
-        }
-      }
+    &:hover {
+      color: $spinach;
+      background-color: $lime;
     }
   }
 }

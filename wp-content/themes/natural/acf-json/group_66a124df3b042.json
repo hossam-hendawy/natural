@@ -17,7 +17,8 @@
                 "id": ""
             },
             "placement": "top",
-            "endpoint": 0
+            "endpoint": 0,
+            "selected": 0
         },
         {
             "key": "field_66a1251a837b7",
@@ -33,7 +34,7 @@
                 "class": "",
                 "id": ""
             },
-            "return_format": "id",
+            "return_format": "array",
             "library": "all",
             "min_width": "",
             "min_height": "",
@@ -42,6 +43,7 @@
             "max_height": "",
             "max_size": "",
             "mime_types": "",
+            "allow_in_bindings": 1,
             "preview_size": "medium"
         },
         {
@@ -87,8 +89,8 @@
         },
         {
             "key": "field_66a12554837ba",
-            "label": "CTA Button",
-            "name": "cta_button",
+            "label": "Contact Us",
+            "name": "contact_us",
             "aria-label": "",
             "type": "link",
             "instructions": "",
@@ -99,7 +101,8 @@
                 "class": "",
                 "id": ""
             },
-            "return_format": "array"
+            "return_format": "array",
+            "allow_in_bindings": 1
         },
         {
             "key": "field_66a128446c00c",
@@ -167,7 +170,8 @@
                 "id": ""
             },
             "placement": "top",
-            "endpoint": 0
+            "endpoint": 0,
+            "selected": 0
         },
         {
             "key": "field_66cc4ac389aa0",
@@ -259,5 +263,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1724664590
+    "modified": 1738995364
 }
