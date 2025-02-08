@@ -11,7 +11,6 @@ export function instagram_slider_block() {
     slidesPerView: "auto",
     spaceBetween: 10,
     loop: true,
-
     modules: [Autoplay],
     speed: 5000,
     autoplay: {

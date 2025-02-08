@@ -1,5 +1,23 @@
 @import '../../styles/variables.scss';
 
 .text_slider_block {
-
+  padding-block: 17px 20px;
+  
+  @include min-medium-screen {
+    padding-top: 20px;
+  }
+  
+  .swiper-slide {
+    width: fit-content !important;
+  }
+  
+  .text-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    line-height: 100%;
+    @include min-medium-screen {
+      gap: 55px;
+    }
+  }
 }

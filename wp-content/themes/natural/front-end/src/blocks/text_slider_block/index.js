@@ -9,9 +9,8 @@ export function text_slider_block() {
   
   const swiper = new Swiper(block.querySelector('.text-slider'), {
     slidesPerView: "auto",
-    spaceBetween: 10,
+    spaceBetween: 22,
     loop: true,
-
     modules: [Autoplay],
     speed: 5000,
     autoplay: {
@@ -21,7 +20,7 @@ export function text_slider_block() {
     },
     breakpoints: {
       1024: {
-        spaceBetween: 20,
+        spaceBetween: 50,
       },
     },
   
