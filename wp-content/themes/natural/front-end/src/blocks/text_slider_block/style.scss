@@ -18,7 +18,10 @@
     align-items: center;
     gap: 18px;
     line-height: 100%;
-    @include min-medium-screen {
+    @include media-screen-768 {
+      gap: 40px;
+    }
+    @include min-media-screen-992{
       gap: 55px;
     }
   }

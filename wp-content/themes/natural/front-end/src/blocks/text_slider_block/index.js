@@ -19,7 +19,10 @@ export function text_slider_block() {
       pauseOnMouseEnter: true,
     },
     breakpoints: {
-      1024: {
+      768: {
+        spaceBetween: 40,
+      },
+      992: {
         spaceBetween: 50,
       },
     },
