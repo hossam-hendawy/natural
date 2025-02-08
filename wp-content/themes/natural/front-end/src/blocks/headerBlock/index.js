@@ -39,7 +39,7 @@ export function headerBlock() {
       // region prevent page scroll
       document.documentElement.classList.add('modal-opened');
       // endregion prevent page scroll
-      gsap.fromTo(menuLinks.querySelectorAll('.menu-item'), {
+      gsap.fromTo(menuLinks.querySelectorAll('.menu-item , .bottom-content'), {
         y: 30,
         autoAlpha: 0,
       }, {

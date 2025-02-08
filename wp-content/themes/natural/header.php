@@ -85,7 +85,6 @@ $linkedin_url = get_field('linkedin_url', 'options');
         <?php if (!empty($contact_us) && is_array($contact_us)) { ?>
           <a class="cta-button contactUS-btn desktop-only" href="<?= $contact_us['url'] ?>" target="<?= $contact_us['target'] ?>"><?= $contact_us['title'] ?></a>
         <?php } ?>
-        
         <div class="bottom-content">
           <div class="cta-wrapper">
             <?php if (!empty($contact_us) && is_array($contact_us)) { ?>
@@ -95,6 +94,20 @@ $linkedin_url = get_field('linkedin_url', 'options');
               <a class="cta-button join-us-btn mobile-only" href="<?= $join_us['url'] ?>" target="<?= $join_us['target'] ?>"><?= $join_us['title'] ?></a>
             <?php } ?>
           </div>
+          <?php if (have_rows('bottom_links', 'options')) { ?>
+            <div class="bottom-links">
+              
+              <?php while (have_rows('bottom_links', 'options')) {
+                the_row();
+                $link = get_sub_field('link');
+                ?>
+                <a href="<?= $link['url'] ?>" target="<?= $link['target'] ?>"
+                   class="link">
+                  <?= $link['title'] ?>
+                </a>
+              <?php } ?>
+            </div>
+          <?php } ?>
           <div class="social-icons">
             <?php if ($instagram_url): ?>
               <a href="<?= $instagram_url ?>" target="_blank" aria-label="instagram (opens in a new tab)" class="social-icon">
