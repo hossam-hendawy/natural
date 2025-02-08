@@ -123,8 +123,8 @@
         },
         {
             "key": "field_66a128446c00c",
-            "label": "Telegram URL",
-            "name": "telegram_url",
+            "label": "Instagram URL",
+            "name": "instagram_url",
             "aria-label": "",
             "type": "url",
             "instructions": "",
@@ -136,12 +136,13 @@
                 "id": ""
             },
             "default_value": "",
+            "allow_in_bindings": 1,
             "placeholder": ""
         },
         {
             "key": "field_66a1285b6c00e",
-            "label": "Discord URL",
-            "name": "discord_url",
+            "label": "Facebook URL",
+            "name": "facebook_url",
             "aria-label": "",
             "type": "url",
             "instructions": "",
@@ -153,12 +154,13 @@
                 "id": ""
             },
             "default_value": "",
+            "allow_in_bindings": 1,
             "placeholder": ""
         },
         {
             "key": "field_66a128696c00f",
-            "label": "Twitter URL",
-            "name": "twitter_url",
+            "label": "LinkedIn URL",
+            "name": "linkedin_url",
             "aria-label": "",
             "type": "url",
             "instructions": "",
@@ -170,6 +172,7 @@
                 "id": ""
             },
             "default_value": "",
+            "allow_in_bindings": 1,
             "placeholder": ""
         },
         {
@@ -280,5 +283,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1739001985
+    "modified": 1739003288
 }
