@@ -105,6 +105,23 @@
             "allow_in_bindings": 1
         },
         {
+            "key": "field_67a710752a012",
+            "label": "Join Us",
+            "name": "join_us",
+            "aria-label": "",
+            "type": "link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "allow_in_bindings": 1
+        },
+        {
             "key": "field_66a128446c00c",
             "label": "Telegram URL",
             "name": "telegram_url",
@@ -263,5 +280,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1738995364
+    "modified": 1739001985
 }

@@ -54,7 +54,7 @@ header {
     
     svg {
       @include max-medium-screen {
-        path{
+        path {
           fill: $white-color;
         }
       }
@@ -205,6 +205,7 @@ header {
     overflow: scroll;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     padding-block: 204px 22px;
     padding-inline: 20px;
     @include min-medium-screen {
@@ -223,10 +224,12 @@ header {
     display: flex;
     flex-direction: column;
     gap: 17px;
+    margin-bottom: 25px;
     @include min-medium-screen {
       align-items: center;
       flex-direction: row;
       gap: 40px;
+      margin-bottom: 0;
     }
   }
   
@@ -240,11 +243,38 @@ header {
       font-size: 44px;
       font-style: normal;
       font-weight: 400;
-      line-height: 95%;
+      line-height: 37px;
+      display: block;
+      transition: color $duration;
+      
+      svg {
+        path{
+          fill: currentColor;
+        }
+      }
+      &:hover {
+        color: $off-white-color;
+      }
+      
       @include min-medium-screen {
         font-size: 14px;
         font-weight: 500;
         line-height: 100%;
+      }
+    }
+    
+    .home-url {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      
+      svg {
+        width: 20px;
+        height: 15.449px;
+      }
+      
+      @include min-medium-screen {
+        display: none;
       }
     }
     
@@ -311,6 +341,12 @@ header {
   }
   
   
+  .cta-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
   .contactUS-btn {
     background-color: transparent;
     color: $lime;
@@ -320,6 +356,19 @@ header {
     line-height: 100%;
     min-width: 120px;
     border: 1px solid $lime;
+    display: none;
+    
+    &.desktop-only {
+      @include min-medium-screen {
+        display: flex;
+      }
+    }
+    
+    &.mobile-only {
+      display: flex;
+      min-width: 163px;
+      border: 0.5px solid $lime;
+    }
     
     &:hover {
       color: $spinach;

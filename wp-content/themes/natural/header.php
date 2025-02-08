@@ -14,6 +14,7 @@
 <?php
 $header_logo = get_field('header_logo', 'options');
 $contact_us = get_field('contact_us', 'options');
+$join_us = get_field('join_us', 'options');
 ?>
 <header class="natural-header">
   <div class="header-wrapper">
@@ -56,6 +57,15 @@ $contact_us = get_field('contact_us', 'options');
       <div class="navbar-wrapper">
         <?php if (have_rows('menu_links', 'options')) { ?>
           <ul class="primary-menu">
+            <li class="menu-item">
+              <a href="<?= site_url() ?>" target="_self" class="header-link home-url">
+                <svg width="20" height="16" viewBox="0 0 20 16" fill="none" aria-hidden="true">
+                  <path d="M15.0791 0.188233L11.689 0.188232C11.689 3.5581 12.9532 5.4646 14.3047 6.53954C15.4319 7.43563 16.8356 7.91256 18.2757 7.91256C16.8356 7.91256 15.4319 8.38888 14.3047 9.28558C12.9526 10.3605 11.689 12.2664 11.689 15.6369L15.0791 15.6369C15.0791 15.6369 14.6784 9.38884 20.0002 7.91318C14.6784 6.43628 15.0791 0.188233 15.0791 0.188233Z" fill="#96F56D"/>
+                  <path d="M13.4168 7.91195C8.09493 6.43629 8.49565 0.188234 8.49565 0.188234L5.10551 0.188233C5.1055 3.5581 6.36974 5.4646 7.72125 6.53954C8.28607 6.98881 8.92034 7.33238 9.59395 7.56347L-9.63061e-07 5.6963L-1.73807e-06 10.1288L9.59395 8.26166C8.92034 8.49275 8.28669 8.83631 7.72187 9.28558C6.36974 10.3605 5.10612 12.2664 5.10612 15.6369L8.49627 15.6369C8.49627 15.6369 8.09555 9.38884 13.4174 7.91318" fill="#96F56D"/>
+                </svg>
+                Home
+              </a>
+            </li>
             <?php while (have_rows('menu_links', 'options')) {
               the_row();
               $menu_link = get_sub_field('menu_link');
@@ -70,9 +80,21 @@ $contact_us = get_field('contact_us', 'options');
           </ul>
         <?php } ?>
         <?php if (!empty($contact_us) && is_array($contact_us)) { ?>
-          <a class="cta-button contactUS-btn" href="<?= $contact_us['url'] ?>" target="<?= $contact_us['target'] ?>"><?= $contact_us['title'] ?></a>
+          <a class="cta-button contactUS-btn desktop-only" href="<?= $contact_us['url'] ?>" target="<?= $contact_us['target'] ?>"><?= $contact_us['title'] ?></a>
         <?php } ?>
+        
+        <div class="bottom-content">
+          <div class="cta-wrapper">
+            <?php if (!empty($contact_us) && is_array($contact_us)) { ?>
+              <a class="cta-button contactUS-btn mobile-only" href="<?= $contact_us['url'] ?>" target="<?= $contact_us['target'] ?>"><?= $contact_us['title'] ?></a>
+            <?php } ?>
+            <?php if (!empty($join_us) && is_array($join_us)) { ?>
+              <a class="cta-button contactUS-btn mobile-only" href="<?= $join_us['url'] ?>" target="<?= $join_us['target'] ?>"><?= $join_us['title'] ?></a>
+            <?php } ?>
+          </div>
+        </div>
       </div>
+    
     </nav>
   </div>
 </header>
