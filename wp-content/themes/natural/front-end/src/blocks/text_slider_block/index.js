@@ -7,7 +7,7 @@ export function text_slider_block() {
   const block = document.querySelector('.text_slider_block');
   if (!block) return;
   
-  const swiper = new Swiper(block.querySelector('.instagram-slider'), {
+  const swiper = new Swiper(block.querySelector('.text-slider'), {
     slidesPerView: "auto",
     spaceBetween: 10,
     loop: true,
