@@ -2,16 +2,15 @@
 
 .home_here_block {
   background-color: $spinach;
-  @include max-screen-768 {
-    height: 100vh;
+  padding-bottom: 108px;
+  @include media-screen-768 {
+    padding-top: 150px;
   }
-  
-  @include media-screen-768{
-    padding-block: 150px 94px;
-  }
-  
   @include min-medium-screen {
-    padding-block: 236px 94px;
+    padding-block: 180px 75px;
+  }
+  @include large-screen {
+    padding-block: 236px 244px;
   }
   
   .container {
@@ -22,7 +21,6 @@
   }
   
   .media-wrapper {
-    
     border-radius: 10px 10px 0 0;
     @include media-screen-768 {
       padding-top: 45.2898%;
@@ -32,12 +30,151 @@
   
   .media-wrapper {
     @include max-screen-768 {
-      position: absolute;
+      position: relative;
       width: 100%;
-      height: 100%;
+      height: 100vh;
     }
   }
   
+  .content-wrapper {
+    position: relative;
+    margin-top: 13px;
+    padding-inline: 20px 16px;
+    @include media-screen-768 {
+      margin-top: 52px;
+    }
+    @include min-media-screen-992 {
+      padding-block: 40px 38px;
+      padding-inline: 20px;
+    }
+    @include min-medium-screen {
+      margin-top: 94px;
+      padding-block: 40px 38px;
+      padding-inline: 49px 40px;
+    }
+ 
+    
+    .corner {
+      position: absolute;
+      width: 7px;
+      height: 7px;
+      display: none;
+      @include min-medium-screen {
+        display: flex;
+      }
+      
+    }
+    
+    .trc, .tlc {
+      top: 0;
+    }
+    
+    .trc {
+      right: 0;
+    }
+    
+    .tlc {
+      left: 0;
+    }
+    
+    .brc, .blc {
+      bottom: 0;
+    }
+    
+    .brc {
+      right: 0;
+    }
+    
+    .blc {
+      left: 0;
+    }
+    
+    .tcc, .bcc {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    
+    .tcc {
+      top: 0;
+    }
+    
+    .bcc {
+      bottom: 0;
+    }
+    
+    .mrc, .mlc {
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    
+    .mrc {
+      right: 0;
+    }
+    
+    .mlc {
+      left: 0;
+    }
+    
+    
+    .main-title {
+      color: $off-white-color;
+      margin-bottom: 54px;
+      @include max-screen-768 {
+        font-size: 46px;
+        margin-bottom: 43px;
+        line-height: 104%;
+      }
+      @include min-medium-screen {
+        max-width: 514px;
+      }
+      @include large-screen {
+        max-width: 684px;
+        margin-bottom: 80px;
+      }
+    }
+    
+    .description {
+      margin-left: auto;
+      max-width: 591px;
+      margin-bottom: 11px;
+      @include max-screen-768 {
+        max-width: 277px;
+        margin-bottom: 32px;
+      }
+      @include min-media-screen-992 {
+        max-width: 400px;
+      }
+      @include min-medium-screen {
+        max-width: 509px;
+      }
+      @include large-screen {
+        margin-right: 44px;
+      }
+      @include x-large-screen {
+        max-width: 599px;
+      }
+      
+      p {
+        @include max-screen-768 {
+          font-family: $tomato;
+          font-size: 20px;
+          font-style: normal;
+          font-weight: 300;
+          line-height: 110%;
+          letter-spacing: -0.2px;
+        }
+        font-family: $halyard;
+      }
+      
+    }
+    
+    .cta-button {
+      &:hover {
+        background-color: $off-white-color;
+        color: $spinach;
+      }
+    }
+  }
 }
 
 #wpadminbar {
