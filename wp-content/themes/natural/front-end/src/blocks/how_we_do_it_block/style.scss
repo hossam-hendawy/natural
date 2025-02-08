@@ -10,6 +10,7 @@
   
     @include large-screen {
       padding-inline: 180px 97px;
+      padding-block: 60px;
     }
     @include x-large-screen {
       padding-inline: 233px 97px;
