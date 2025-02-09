@@ -129,7 +129,7 @@
                     "name": "number_of_posts",
                     "aria-label": "",
                     "type": "number",
-                    "instructions": "The maximum value allowed is 3.",
+                    "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
@@ -137,9 +137,10 @@
                         "class": "",
                         "id": ""
                     },
-                    "default_value": "",
+                    "default_value": -1,
                     "min": "",
-                    "max": 2,
+                    "max": "",
+                    "allow_in_bindings": 1,
                     "placeholder": "",
                     "step": "",
                     "prepend": "",
@@ -191,5 +192,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1738817040
+    "modified": 1739096412
 }
