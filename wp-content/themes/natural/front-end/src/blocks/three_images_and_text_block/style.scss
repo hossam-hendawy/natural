@@ -142,6 +142,19 @@
       }
     }
     
+    
+    .image-cards {
+      @include media-screen-768 {
+        display: none;
+      }
+      
+      .swiper-slide {
+        .aspect-ratio {
+          padding-top: 100%;
+        }
+      }
+    }
+    
     .right-content {
       width: 100%;
       display: flex;

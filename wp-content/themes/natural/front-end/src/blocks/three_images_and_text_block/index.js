@@ -1,8 +1,17 @@
 import '../three_images_and_text_block/style.scss';
+import Swiper from 'swiper';
+import 'swiper/swiper.scss';
+import 'swiper/modules/navigation.scss';
 
 export function three_images_and_text_block() {
-  const footerSelector = document.querySelector('.three_images_and_text_block');
-  if (!footerSelector) return;
+  const block = document.querySelector('.three_images_and_text_block');
+  if (!block) return;
   
+  
+  const swiper = new Swiper(block.querySelector('.image-cards'), {
+    slidesPerView: 1,
+    spaceBetween: 20,
+    loop: true,
+  });
 }
 

@@ -44,34 +44,27 @@ $cta_button = get_field('cta_button');
         echo bis_get_attachment_picture(
             $small_image,
             [
-                375 => [335, 335, 1],
-                600 => [560, 560, 1],
-                768 => [312, 312, 1],
-                992 => [410, 410, 1],
-                1024 => [454, 454, 1],
-                1280 => [575, 575, 1],
-                1440 => [590, 590, 1],
-                1920 => [562, 562, 1]
+                768 => [142, 142, 1],
+                992 => [142, 142, 1],
+                1024 => [170, 170, 1],
+                1280 => [204, 204, 1],
+                1440 => [204, 204, 1]
             ],
             [
                 'retina' => true, 'picture_class' => $picture_class,
             ],
         );
         ?>
-        
         <?php
         $picture_class = 'medium-image cover-image br-10';
         echo bis_get_attachment_picture(
             $medium_image,
             [
-                375 => [335, 335, 1],
-                600 => [560, 560, 1],
-                768 => [312, 312, 1],
-                992 => [410, 410, 1],
-                1024 => [454, 454, 1],
-                1280 => [575, 575, 1],
-                1440 => [590, 590, 1],
-                1920 => [562, 562, 1]
+                768 => [140, 140, 1],
+                992 => [140, 140, 1],
+                1024 => [210, 210, 1],
+                1280 => [266, 266, 1],
+                1440 => [266, 266, 1]
             ],
             [
                 'retina' => true, 'picture_class' => $picture_class,
@@ -83,22 +76,80 @@ $cta_button = get_field('cta_button');
         echo bis_get_attachment_picture(
             $large_image,
             [
-                375 => [335, 335, 1],
-                600 => [560, 560, 1],
-                768 => [312, 312, 1],
-                992 => [410, 410, 1],
-                1024 => [454, 454, 1],
-                1280 => [575, 575, 1],
-                1440 => [590, 590, 1],
-                1920 => [562, 562, 1]
+                768 => [187, 187, 1],
+                992 => [187, 187, 1],
+                1024 => [250, 250, 1],
+                1280 => [334, 334, 1],
+                1440 => [334, 334, 1],
+                1920 => [334, 334, 1]
             ],
             [
                 'retina' => true, 'picture_class' => $picture_class,
             ],
         );
         ?>
-      
-      
+      </div>
+      <div class="swiper image-cards">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <?php
+            $picture_class = 'cover-image aspect-ratio br-10';
+            echo bis_get_attachment_picture(
+                $small_image,
+                [
+                    375 => [335, 335, 1],
+                    600 => [560, 560, 1],
+                    768 => [312, 312, 1],
+                    992 => [410, 410, 1],
+                    1024 => [454, 454, 1],
+                    1280 => [575, 575, 1],
+                    1440 => [590, 590, 1],
+                    1920 => [562, 562, 1]
+                ],
+                [
+                    'retina' => true, 'picture_class' => $picture_class,
+                ],
+            );
+            ?></div>
+          <div class="swiper-slide"> <?php
+            $picture_class = 'cover-image aspect-ratio br-10';
+            echo bis_get_attachment_picture(
+                $medium_image,
+                [
+                    375 => [335, 335, 1],
+                    600 => [560, 560, 1],
+                    768 => [312, 312, 1],
+                    992 => [410, 410, 1],
+                    1024 => [454, 454, 1],
+                    1280 => [575, 575, 1],
+                    1440 => [590, 590, 1],
+                    1920 => [562, 562, 1]
+                ],
+                [
+                    'retina' => true, 'picture_class' => $picture_class,
+                ],
+            );
+            ?></div>
+          <div class="swiper-slide"> <?php
+            $picture_class = 'cover-image aspect-ratio br-10';
+            echo bis_get_attachment_picture(
+                $large_image,
+                [
+                    375 => [335, 335, 1],
+                    600 => [560, 560, 1],
+                    768 => [312, 312, 1],
+                    992 => [410, 410, 1],
+                    1024 => [454, 454, 1],
+                    1280 => [575, 575, 1],
+                    1440 => [590, 590, 1],
+                    1920 => [562, 562, 1]
+                ],
+                [
+                    'retina' => true, 'picture_class' => $picture_class,
+                ],
+            );
+            ?></div>
+        </div>
       </div>
       <div class="right-content">
         <?php if ($label) { ?>
