@@ -62,4 +62,37 @@ footer {
   .join-us-btn {
     min-width: 82px;
   }
+  
+  .bottom-content-wrapper {
+    padding-top: 24px;
+    border-top: 0.5px solid $lime;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-top: 60px;
+    
+    .social-icons {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      
+      .social-icon {
+        width: 38px;
+        aspect-ratio: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        border: 0.5px solid $lime;
+  
+  
+        .icon-wrapper {
+          width: 15px;
+          aspect-ratio: 1;
+          
+        }
+      }
+      
+    }
+  }
 }

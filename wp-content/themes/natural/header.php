@@ -135,7 +135,6 @@ $linkedin_url = get_field('linkedin_url', 'options');
           </div>
         </div>
       </div>
-    
     </nav>
   </div>
 </header>
