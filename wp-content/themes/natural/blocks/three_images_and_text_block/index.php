@@ -22,6 +22,8 @@ if (isset($block)) {
 ?>
 <?php
 $small_image = get_field('small_image');
+$medium_image = get_field('medium_image');
+$large_image = get_field('large_image');
 $label = get_field('label');
 $title = get_field('title');
 $description = get_field('description');
@@ -56,6 +58,47 @@ $cta_button = get_field('cta_button');
             ],
         );
         ?>
+        
+        <?php
+        $picture_class = 'medium-image cover-image br-10';
+        echo bis_get_attachment_picture(
+            $medium_image,
+            [
+                375 => [335, 335, 1],
+                600 => [560, 560, 1],
+                768 => [312, 312, 1],
+                992 => [410, 410, 1],
+                1024 => [454, 454, 1],
+                1280 => [575, 575, 1],
+                1440 => [590, 590, 1],
+                1920 => [562, 562, 1]
+            ],
+            [
+                'retina' => true, 'picture_class' => $picture_class,
+            ],
+        );
+        ?>
+        <?php
+        $picture_class = 'large-image cover-image br-10';
+        echo bis_get_attachment_picture(
+            $large_image,
+            [
+                375 => [335, 335, 1],
+                600 => [560, 560, 1],
+                768 => [312, 312, 1],
+                992 => [410, 410, 1],
+                1024 => [454, 454, 1],
+                1280 => [575, 575, 1],
+                1440 => [590, 590, 1],
+                1920 => [562, 562, 1]
+            ],
+            [
+                'retina' => true, 'picture_class' => $picture_class,
+            ],
+        );
+        ?>
+      
+      
       </div>
       <div class="right-content">
         <?php if ($label) { ?>
@@ -70,7 +113,7 @@ $cta_button = get_field('cta_button');
         <?php if (!empty($cta_button) && is_array($cta_button)) { ?>
           <a class="cta-button" href="<?= $cta_button['url'] ?>" target="<?= $cta_button['target'] ?>"><?= $cta_button['title'] ?></a>
         <?php } ?>
-
+      
       </div>
     </div>
   </div>
