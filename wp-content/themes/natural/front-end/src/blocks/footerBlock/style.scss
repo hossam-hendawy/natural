@@ -3,11 +3,10 @@
 
 footer {
   padding-block: 31px 26px;
-  @include min-medium-screen {
+  background-color: $spinach;
+  @include media-screen-768 {
     padding-block: 61px 23px;
   }
-  background-color: $spinach;
-  
   
   .content-wrapper {
     display: flex;
@@ -17,11 +16,31 @@ footer {
   .top-content-wrapper {
     display: flex;
     justify-content: space-between;
-    
-    .left-links-wrapper {
+    @include media-screen-768 {
+      flex-wrap: wrap-reverse;
+      align-items: flex-end;
+      gap: 20px;
+    }
+    @include min-media-screen-992 {
+      align-items: flex-start;
+      flex-wrap: nowrap;
+      gap: 0;
+    }
+  }
+  
+  .left-links-wrapper {
+    width: 100%;
+    display: flex;
+    row-gap: 25px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex-shrink: 0;
+    @include media-screen-768 {
+      width: 574px;
+    }
+    @include large-screen {
       width: 621px;
-      display: flex;
-      justify-content: space-between;
     }
     
     .column-title, .footer-link {
@@ -46,6 +65,12 @@ footer {
       display: block;
     }
     
+    .column-wrapper {
+      @include max-screen-768 {
+        width: 45%;
+      }
+    }
+    
     .links-wrapper {
       display: flex;
       flex-direction: column;
@@ -58,13 +83,19 @@ footer {
   }
   
   .site-logo {
-    width: 571.831px;
-    height: 104px;
-    flex-shrink: 0;
     display: none;
+    @include media-screen-768 {
+      width: 320px;
+      height: 64px;
+      flex-shrink: 0;
+    }
+    @include large-screen {
+      width: 571.831px;
+      height: 104px;
+    }
     
     &.desktop {
-      @include min-medium-screen {
+      @include media-screen-768 {
         display: block;
       }
     }
@@ -82,6 +113,11 @@ footer {
     justify-content: space-between;
     align-items: center;
     flex-direction: column;
+    flex-wrap: wrap;
+    
+    @include media-screen-600 {
+      align-items: flex-start;
+    }
     
     .legal-links {
       display: flex;
@@ -89,20 +125,28 @@ footer {
       gap: 10px;
       flex-wrap: wrap;
       margin-bottom: 40px;
-      @include min-medium-screen {
-        display: none;
+      @include media-screen-768 {
+        justify-content: flex-start;
+        margin-bottom: 0;
+        width: 100%;
+      }
+      @include min-media-screen-992 {
+        display: none !important;
       }
     }
     
-    @include min-medium-screen {
-      margin-top: 306px;
+    @include media-screen-768 {
+      margin-top: 95px;
       flex-direction: row;
       align-items: flex-end;
+    }
+    @include large-screen {
+      margin-top: 306px;
     }
     
     .certification_badge {
       display: none;
-      @include min-medium-screen {
+      @include media-screen-768 {
         display: block;
         width: 88.254px;
         height: 66.66px;
@@ -114,19 +158,19 @@ footer {
   .cta-wrappers {
     display: flex;
     gap: 10px;
-    @include min-medium-screen {
+    @include media-screen-768 {
       gap: 13px;
     }
   }
   
   .cta-button {
-    @include max-medium-screen {
-      min-width: 162px;
+    @include max-screen-768 {
+      min-width: 162px !important;
     }
   }
   
   .join-us-btn {
-    @include min-medium-screen {
+    @include max-screen-768 {
       min-width: 82px;
     }
   }
@@ -137,7 +181,7 @@ footer {
     align-items: flex-end;
     flex-direction: row-reverse;
     margin-block: 54px 79px;
-    @include min-medium-screen {
+    @include media-screen-768 {
       flex-direction: row;
       margin-top: 60px;
       padding-top: 24px;
@@ -180,12 +224,15 @@ footer {
   .legal-links {
     display: none;
     
-    
-    &.desktop {
-      display: flex;
+    @include min-media-screen-992 {
+      display: flex !important;
       align-items: center;
+      gap: 30px;
+    }
+    @include large-screen{
       gap: 50px;
     }
+    
     
     .link {
       color: $lime;
@@ -209,7 +256,7 @@ footer {
       display: block;
       width: 331px;
       height: 63px;
-      @include min-medium-screen {
+      @include media-screen-768 {
         display: none;
       }
     }

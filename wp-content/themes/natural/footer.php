@@ -172,7 +172,7 @@ $copyright_notice = get_field('copyright_notice', 'options');
         <?php } ?>
       </div>
       <div class="bottom-content-wrapper">
-        <div class="social-icons">
+        <div class="social-icons desktop">
           <?php if ($instagram_url): ?>
             <a href="<?= $instagram_url ?>" target="_blank" aria-label="instagram (opens in a new tab)" class="social-icon">
               <svg width="16" height="17" viewBox="0 0 16 17" fill="none" aria-hidden="true">

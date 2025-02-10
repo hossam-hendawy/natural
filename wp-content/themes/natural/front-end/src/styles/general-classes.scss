@@ -14,9 +14,6 @@
 .container {
   margin: 0 auto;
   padding-inline: $container-padding-mobile;
-  @include media-screen-768 {
-    padding-inline: $container-padding-tablet;
-  }
   @include xx-large-screen {
     max-width: 1380px;
   }

@@ -106,3 +106,5 @@ function sanitize_svg($file)
 }
 
 add_filter('wp_handle_upload_prefilter', 'sanitize_svg');
+
+
