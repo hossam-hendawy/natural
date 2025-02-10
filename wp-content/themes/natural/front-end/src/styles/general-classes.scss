@@ -235,3 +235,31 @@ section {
 }
 
 // endregion swiper navigation
+
+
+.contactUS-btn, .join-us-btn {
+  background-color: transparent;
+  color: $lime;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 100%;
+  min-width: 120px;
+  border: 1px solid $lime;
+
+  
+  &:hover {
+    color: $spinach;
+    background-color: $lime;
+  }
+}
+
+.join-us-btn {
+  color: $spinach;
+  background-color: $lime;
+  
+  &:hover {
+    color: $lime;
+    background-color: transparent;
+  }
+}
