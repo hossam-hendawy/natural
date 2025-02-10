@@ -1,15 +1,28 @@
 @import '../../styles/variables';
 
 .three_images_and_text_block {
+  position: relative;
+  z-index: 2;
   background: $off-white-color;
   padding-block: 20px 40px;
   
   @include min-medium-screen {
-    padding-block: 40px 80px;
+    padding-block: 81px 0;
   }
   
   @include x-large-screen {
     padding-top: 0;
+  }
+  
+  
+  .big-arrow {
+    position: absolute;
+    width: 890px;
+    height: 679px;
+    left: -152px;
+    top: 116px;
+    z-index: -1;
+    
   }
   
   .cards-wrapper {
@@ -20,17 +33,27 @@
       flex-direction: row;
     }
     @include x-large-screen {
-      padding-block: 80px;
+      padding-block: 174px 87px;
       padding-inline: 80px 48px;
     }
     
     .image-card {
+      position: relative;
+      background-color: cadetblue;
       width: 100%;
       @include media-screen-768 {
         width: 44%;
       }
       @include min-medium-screen {
         width: 47.13%;
+      }
+      
+      .small-image {
+        position: absolute;
+        bottom: 52px;
+        left: 6%;
+        width: 204px;
+        height: 204px;
       }
       
       .left-image {
@@ -52,7 +75,6 @@
       }
       @include min-medium-screen {
         width: 42.8%;
-        padding-block: 13px 9px;
       }
       
       
@@ -67,10 +89,9 @@
           max-width: 313px;
           margin-bottom: 52px;
         }
-        
         @include large-screen {
           max-width: 90%;
-          margin-bottom: 123px;
+          margin-bottom: 146px;
         }
         @include x-large-screen {
           max-width: 100%;
@@ -78,7 +99,7 @@
       }
       
       .description {
-        max-width: 421px;
+        max-width: 476px;
       }
       
       .cta-button {

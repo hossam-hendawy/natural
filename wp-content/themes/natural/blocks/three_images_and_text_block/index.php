@@ -21,20 +21,26 @@ if (isset($block)) {
 }
 ?>
 <?php
-$image = get_field('image');
+$small_image = get_field('small_image');
 $label = get_field('label');
 $title = get_field('title');
 $description = get_field('description');
 $cta_button = get_field('cta_button');
 ?>
 <section id="<?= esc_attr($id) ?>" class="<?= esc_attr($className) ?>">
+  <svg class="big-arrow" width="741" height="680" viewBox="0 0 741 680" fill="none" aria-hidden="true">
+    <path opacity="0.05" d="M524.128 0.196533H375.075C375.075 148.441 430.659 232.311 490.08 279.599C539.638 319.019 601.356 340 664.669 340C601.356 340 539.638 360.954 490.08 400.401C430.632 447.689 375.075 531.531 375.075 679.803H524.128C524.128 679.803 506.51 404.943 740.492 340.027C506.51 275.057 524.128 0.196533 524.128 0.196533Z"
+          fill="#1C301A"/>
+    <path opacity="0.05" d="M440.787 339.973C206.448 275.057 224.093 0.196533 224.093 0.196533H74.813C74.813 148.441 130.482 232.311 189.993 279.599C214.864 299.363 242.794 314.477 272.455 324.643L-150 242.504V437.496L272.455 355.357C242.794 365.523 214.891 380.637 190.02 400.401C130.482 447.689 74.84 531.531 74.84 679.803H224.12C224.12 679.803 206.475 404.943 440.814 340.027"
+          fill="#1C301A"/>
+  </svg>
   <div class="container">
     <div class="cards-wrapper">
       <div class="image-card">
         <?php
-        $picture_class = 'left-image aspect-ratio br-10';
+        $picture_class = 'small-image cover-image br-10';
         echo bis_get_attachment_picture(
-            $image,
+            $small_image,
             [
                 375 => [335, 335, 1],
                 600 => [560, 560, 1],
