@@ -147,12 +147,10 @@
       @include media-screen-768 {
         display: none;
       }
-      
-      .swiper-slide {
-        .aspect-ratio {
-          padding-top: 100%;
-        }
-      }
+    }
+    
+    .swiper-slide {
+      width: 316px !important;
     }
     
     .right-content {

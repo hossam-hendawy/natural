@@ -1,7 +1,9 @@
 @import 'variables.scss';
 
 .modal-opened {
-  overflow: hidden;
+  @include max-medium-screen{
+    overflow: hidden;
+  }
 }
 
 .hide-scrollbar {

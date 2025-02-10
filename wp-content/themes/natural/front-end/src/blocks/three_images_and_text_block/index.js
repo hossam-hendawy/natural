@@ -9,7 +9,7 @@ export function three_images_and_text_block() {
   
   
   const swiper = new Swiper(block.querySelector('.image-cards'), {
-    slidesPerView: 1,
+    slidesPerView: 'auto',
     spaceBetween: 20,
     loop: true,
   });

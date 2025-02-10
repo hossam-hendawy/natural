@@ -93,18 +93,12 @@ $cta_button = get_field('cta_button');
         <div class="swiper-wrapper">
           <div class="swiper-slide">
             <?php
-            $picture_class = 'cover-image aspect-ratio br-10';
+            $picture_class = 'cover-image br-10';
             echo bis_get_attachment_picture(
                 $small_image,
                 [
-                    375 => [335, 335, 1],
-                    600 => [560, 560, 1],
-                    768 => [312, 312, 1],
-                    992 => [410, 410, 1],
-                    1024 => [454, 454, 1],
-                    1280 => [575, 575, 1],
-                    1440 => [590, 590, 1],
-                    1920 => [562, 562, 1]
+                    376 => [316, 316, 1],
+                    600 => [316, 316, 1]
                 ],
                 [
                     'retina' => true, 'picture_class' => $picture_class,
@@ -112,18 +106,12 @@ $cta_button = get_field('cta_button');
             );
             ?></div>
           <div class="swiper-slide"> <?php
-            $picture_class = 'cover-image aspect-ratio br-10';
+            $picture_class = 'cover-image br-10';
             echo bis_get_attachment_picture(
                 $medium_image,
                 [
-                    375 => [335, 335, 1],
-                    600 => [560, 560, 1],
-                    768 => [312, 312, 1],
-                    992 => [410, 410, 1],
-                    1024 => [454, 454, 1],
-                    1280 => [575, 575, 1],
-                    1440 => [590, 590, 1],
-                    1920 => [562, 562, 1]
+                    376 => [316, 316, 1],
+                    600 => [316, 316, 1]
                 ],
                 [
                     'retina' => true, 'picture_class' => $picture_class,
@@ -131,18 +119,12 @@ $cta_button = get_field('cta_button');
             );
             ?></div>
           <div class="swiper-slide"> <?php
-            $picture_class = 'cover-image aspect-ratio br-10';
+            $picture_class = 'cover-image br-10';
             echo bis_get_attachment_picture(
                 $large_image,
                 [
-                    375 => [335, 335, 1],
-                    600 => [560, 560, 1],
-                    768 => [312, 312, 1],
-                    992 => [410, 410, 1],
-                    1024 => [454, 454, 1],
-                    1280 => [575, 575, 1],
-                    1440 => [590, 590, 1],
-                    1920 => [562, 562, 1]
+                    376 => [316, 316, 1],
+                    600 => [316, 316, 1]
                 ],
                 [
                     'retina' => true, 'picture_class' => $picture_class,
@@ -164,7 +146,6 @@ $cta_button = get_field('cta_button');
         <?php if (!empty($cta_button) && is_array($cta_button)) { ?>
           <a class="cta-button" href="<?= $cta_button['url'] ?>" target="<?= $cta_button['target'] ?>"><?= $cta_button['title'] ?></a>
         <?php } ?>
-      
       </div>
     </div>
   </div>
