@@ -7,10 +7,10 @@
   @include min-medium-screen {
     padding-block: 40px 80px;
   }
-  
-  @include x-large-screen{
+  @include x-large-screen {
     padding-top: 0;
   }
+  
   .cards-wrapper {
     display: flex;
     flex-direction: column;
@@ -49,9 +49,15 @@
         width: 50%;
         margin-top: 0;
       }
-      @include min-medium-screen {
+      @include min-medium-screen{
         width: 42.8%;
+      }
+      @include large-screen {
+        width: 45.8%;
         padding-block: 13px 9px;
+      }
+      @include x-large-screen{
+        width: 42.8%;
       }
       
       

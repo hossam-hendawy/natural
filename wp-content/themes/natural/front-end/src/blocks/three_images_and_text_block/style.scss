@@ -4,31 +4,51 @@
   position: relative;
   z-index: 2;
   background: $off-white-color;
-  padding-block: 20px 40px;
-  
+  padding-block: 20px 20px;
   @include min-medium-screen {
     padding-block: 81px 0;
   }
-  
   @include x-large-screen {
     padding-top: 0;
   }
   
   
   .big-arrow {
-    position: absolute;
-    width: 890px;
-    height: 679px;
-    left: -152px;
-    top: 116px;
-    z-index: -1;
-    
+    display: none;
+    @include media-screen-768 {
+      display: block;
+      position: absolute;
+      z-index: -1;
+      width: 720px;
+      height: 339px;
+      top: 49px;
+      left: -205px;
+    }
+    @include min-medium-screen {
+      z-index: -1;
+      width: 840px;
+      height: 459px;
+      top: 74px;
+      left: -152px;
+    }
+    @include large-screen {
+      width: 850px;
+      height: 569px;
+      top: 50px;
+    }
+    @include x-large-screen {
+      width: 890px;
+      height: 679px;
+      left: -152px;
+      top: 116px;
+    }
   }
   
   .cards-wrapper {
     display: flex;
     flex-direction: column;
     @include media-screen-768 {
+      padding-block: 52px 0;
       justify-content: space-between;
       flex-direction: row;
     }
@@ -39,10 +59,11 @@
     
     .image-card {
       position: relative;
-      background-color: cadetblue;
       width: 100%;
+      display: none;
       @include media-screen-768 {
         width: 44%;
+        display: block;
       }
       @include min-medium-screen {
         width: 47.13%;
@@ -52,25 +73,68 @@
         position: absolute;
         bottom: 52px;
         left: 6%;
-        width: 204px;
-        height: 204px;
+        width: 170px;
+        aspect-ratio: 1;
+        @include media-screen-768 {
+          aspect-ratio: 1;
+          width: 142px;
+          bottom: 20px;
+          left: 6%;
+        }
+        @include min-medium-screen {
+          width: 170px;
+          left: 3%;
+        }
+        @include large-screen {
+          left: 6%;
+          width: 204px;
+        }
       }
-      
       
       .medium-image {
         position: absolute;
         top: -11px;
-        width: 266px;
-        height: 266px;
+        width: 210px;
+        aspect-ratio: 1;
         left: 14%;
+        @include media-screen-768 {
+          aspect-ratio: 1;
+          width: 140px;
+          position: absolute;
+          top: -11px;
+          left: 14%;
+        }
+        @include min-medium-screen {
+          width: 210px;
+          left: 12%;
+        }
+        @include large-screen {
+          width: 266px;
+          left: 14%;
+        }
       }
       
       .large-image {
         position: absolute;
         width: 334px;
-        height: 334px;
+        aspect-ratio: 1;
         right: -41px;
         top: 130px;
+        @include media-screen-768 {
+          aspect-ratio: 1;
+          width: 187px;
+          position: absolute;
+          top: 70px;
+          right: -10px;
+        }
+        @include min-medium-screen {
+          width: 250px;
+          right: -21px;
+        }
+        @include large-screen {
+          width: 334px;
+          right: -41px;
+        }
       }
       
       .left-image {
@@ -93,7 +157,12 @@
       @include min-medium-screen {
         width: 42.8%;
       }
-      
+      @include large-screen {
+        width: 45.8%;
+      }
+      @include x-large-screen {
+        width: 42.8%;
+      }
       
       .label {
         margin-bottom: 20px;
@@ -105,6 +174,9 @@
         @include media-screen-768 {
           max-width: 313px;
           margin-bottom: 52px;
+        }
+        @include min-medium-screen {
+          max-width: 100%;
         }
         @include large-screen {
           max-width: 90%;
