@@ -70,29 +70,57 @@ footer {
     justify-content: space-between;
     align-items: flex-end;
     margin-top: 60px;
+  }
+  
+  .social-icons {
+    display: flex;
+    align-items: center;
+    gap: 8px;
     
-    .social-icons {
+    .social-icon {
+      width: 38px;
+      aspect-ratio: 1;
       display: flex;
       align-items: center;
-      gap: 8px;
+      justify-content: center;
+      border-radius: 50%;
+      border: 0.5px solid $lime;
+      transition: border-color $duration;
       
-      .social-icon {
-        width: 38px;
+      .icon-wrapper {
+        width: 15px;
         aspect-ratio: 1;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border-radius: 50%;
-        border: 0.5px solid $lime;
-  
-  
-        .icon-wrapper {
-          width: 15px;
-          aspect-ratio: 1;
-          
-        }
       }
       
+      &:hover {
+        border-color: $off-white-color;
+        
+        svg path {
+          fill: $off-white-color;
+        }
+      }
     }
+    
+  }
+  
+  
+  .legal-links {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    
+    .link {
+      color: $lime;
+      font-family: $halyard;
+      transition: color $duration;
+      &:hover{
+        color: $off-white-color;
+      }
+    }
+  }
+  
+  .copyright-notice p {
+    color: $lime;
+    font-family: $halyard;
   }
 }

@@ -8,6 +8,7 @@ $certification_badge = get_field('certification_badge', 'options');
 $instagram_url = get_field('instagram_url', 'options');
 $facebook_url = get_field('facebook_url', 'options');
 $linkedin_url = get_field('linkedin_url', 'options');
+$copyright_notice = get_field('copyright_notice', 'options');
 ?>
 <footer>
   <div class="container">
@@ -83,6 +84,21 @@ $linkedin_url = get_field('linkedin_url', 'options');
             </a>
           <?php endif; ?>
         </div>
+        <?php if (have_rows('legal_links', 'options')) { ?>
+          <div class="legal-links">
+            <?php while (have_rows('legal_links', 'options')) {
+              the_row();
+              $link = get_sub_field('link');
+              ?>
+              <a href="<?= $link['url'] ?>" target="<?= $link['target'] ?>" class="link fz-14 fw-200">
+                <?= $link['title'] ?>
+              </a>
+            <?php } ?>
+          </div>
+        <?php } ?>
+        <?php if ($copyright_notice): ?>
+          <div class="copyright-notice fw-200 fz-14"><?= $copyright_notice ?></div>
+        <?php endif; ?>
       </div>
     </div>
   </div>
