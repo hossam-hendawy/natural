@@ -19,10 +19,37 @@ footer {
     justify-content: space-between;
     
     .left-links-wrapper {
-      width: 50%;
-      background-color: red;
-      height: 150px;
+      width: 621px;
+      display: flex;
+      justify-content: space-between;
     }
+    
+    .column-title {
+      color: $lime;
+      font-family: $tomato;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 36px;
+      margin-bottom: 4px;
+    }
+    
+    .links-wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    
+    .footer-link {
+      color: $lime;
+      font-family: $halyard;
+      transition: color $duration;
+      
+      &:hover {
+        color: $off-white-color;
+      }
+    }
+    
     
     .site-logo {
       width: 571.831px;
@@ -113,7 +140,8 @@ footer {
       color: $lime;
       font-family: $halyard;
       transition: color $duration;
-      &:hover{
+      
+      &:hover {
         color: $off-white-color;
       }
     }

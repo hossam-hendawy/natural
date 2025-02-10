@@ -14,7 +14,34 @@ $copyright_notice = get_field('copyright_notice', 'options');
   <div class="container">
     <div class="content-wrapper">
       <div class="top-content-wrapper">
-        <div class="left-links-wrapper"></div>
+        <div class="left-links-wrapper">
+          
+          <?php
+          if (have_rows('first_column', 'options')) :
+            while (have_rows('first_column', 'options')) :
+              the_row();
+              $column_title = get_sub_field('column_title');
+              ?>
+              <?php if (have_rows('footer_link')) : ?>
+              <div class="wwwwwww">
+                <?php if ($column_title): ?>
+                  <div class="column-title"><?= $column_title ?></div>
+                <?php endif; ?>
+                <div class="links-wrapper">
+                  <?php while (have_rows('footer_link')) : the_row();
+                    $link = get_sub_field('link');
+                    ?>
+                    <?php if ($link) { ?>
+                      <a class="fz-14 fw-200 footer-link" href="<?= $link['url'] ?>" target="<?= $link['target'] ?>"><?= $link['title'] ?></a>
+                    <?php } ?>
+                  <?php endwhile; ?>
+                </div>
+              </div>
+            <?php endif; ?>
+            <?php endwhile;
+          endif; ?>
+        
+        </div>
         <a href="<?= site_url() ?>" class="site-logo">
           <svg width="433" height="79" viewBox="0 0 433 79" fill="none" aria-hidden="true">
             <path d="M77.3398 0H60.2144C60.2144 17.023 66.6007 26.6537 73.4279 32.0838C79.1218 36.6104 86.2129 39.0196 93.4872 39.0196C86.2129 39.0196 79.1218 41.4257 73.4279 45.9555C66.5976 51.3856 60.2144 61.0132 60.2144 78.0392H77.3398C77.3398 78.0392 75.3155 46.4771 102.199 39.0227C75.3155 31.5622 77.3398 0 77.3398 0Z" fill="#96F56D"/>
@@ -40,7 +67,6 @@ $copyright_notice = get_field('copyright_notice', 'options');
             <path d="M179.866 42.3982V69.0332C179.068 68.1018 177.438 66.0776 175.42 62.9667C172.772 58.884 168.897 52.0382 165.47 42.6L165.395 42.3982H156.746V78.0616H163.694V53.8451C167.208 62.9574 172.803 71.2841 179.913 77.9778L180.003 78.0616H186.818V42.3982H179.869H179.866Z" fill="#96F56D"/>
             <path d="M385.864 42.3982V69.0332C385.066 68.1018 383.436 66.0776 381.418 62.9667C378.77 58.884 374.895 52.0382 371.468 42.6L371.393 42.3982H362.744V78.0616H369.692V53.8451C373.206 62.9574 378.801 71.2841 385.911 77.9778L386.001 78.0616H392.816V42.3982H385.867H385.864Z" fill="#96F56D"/>
           </svg>
-        
         </a>
       </div>
       <div class="middle-content-wrapper">
