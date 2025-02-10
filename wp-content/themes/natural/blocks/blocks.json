@@ -38,5 +38,9 @@
   "text_slider_block": {
     "title": "Text Slider Block",
     "status": true
+  },
+  "three_images_and_text_block": {
+    "title": "Three Images And Text Block",
+    "status": true
   }
 }
