@@ -45,6 +45,7 @@ add_action('wp_enqueue_scripts', 'mapCustomStyles');
 
 add_theme_support('editor-styles');
 
+require_once "helpers/helpers.php";
 
 
 //region register blocks
