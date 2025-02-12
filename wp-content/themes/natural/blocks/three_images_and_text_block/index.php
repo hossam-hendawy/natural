@@ -51,8 +51,12 @@ $cta_button = get_field('cta_button');
                 1440 => [204, 204, 1]
             ],
             [
-                'retina' => true, 'picture_class' => $picture_class,
+                'retina' => true,
+                'picture_class' => $picture_class,
             ],
+            [
+                'data-speed' => 1.3
+            ]
         );
         ?>
         <?php
@@ -69,6 +73,9 @@ $cta_button = get_field('cta_button');
             [
                 'retina' => true, 'picture_class' => $picture_class,
             ],
+            [
+                'data-speed' => 1.1
+            ]
         );
         ?>
         <?php
@@ -86,6 +93,9 @@ $cta_button = get_field('cta_button');
             [
                 'retina' => true, 'picture_class' => $picture_class,
             ],
+            [
+                'data-speed' => .9
+            ]
         );
         ?>
       </div>

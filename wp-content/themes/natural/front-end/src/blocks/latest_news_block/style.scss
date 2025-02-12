@@ -38,7 +38,7 @@
     display: flex;
     flex-direction: column;
     padding-bottom: 30px;
-    border-bottom: 0.5px solid $spinach;
+    border-bottom: 1px solid $spinach;
 
     @include media-screen-600 {
       height: auto;
