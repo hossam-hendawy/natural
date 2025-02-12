@@ -7,7 +7,7 @@
   }
   
   .content-wrapper {
-  
+    
     @include large-screen {
       padding-inline: 180px 97px;
       padding-block: 60px;
@@ -15,8 +15,8 @@
     @include x-large-screen {
       padding-inline: 233px 97px;
     }
-  
-  
+    
+    
     .label {
       margin-bottom: 23px;
     }
@@ -29,7 +29,7 @@
         margin-bottom: 59px;
         max-width: 590px;
       }
-      @include large-screen{
+      @include large-screen {
         max-width: 663px;
       }
     }
@@ -75,11 +75,11 @@
         align-items: flex-start;
         max-width: 90%;
         
-        @include min-medium-screen{
+        @include min-medium-screen {
           width: 800px;
           max-width: 800px;
         }
-      
+        
         span {
           font-family: $tomato;
           color: $spinach;
@@ -98,7 +98,7 @@
       
       .answer {
         max-width: 300px;
-        @include min-medium-screen{
+        @include min-medium-screen {
           width: 447px;
           max-width: 447px;
           margin-right: 60px;
@@ -115,9 +115,10 @@
           font-weight: 300;
           line-height: 125%;
           
-          @include min-medium-screen{
+          @include min-medium-screen {
             color: $off-white-color;
           }
+          
           &:not(:last-child) {
             margin-bottom: 19px;
           }
@@ -152,6 +153,10 @@
         }
         
         .toggle-open {
+          .vertical-line {
+            transform: scaleY(0);
+          }
+          
           @include min-medium-screen {
             border-color: $off-white-color;
             
@@ -159,10 +164,6 @@
               line {
                 stroke: $off-white-color !important;
               }
-            }
-            
-            .vertical-line {
-              transform: scaleY(0);
             }
           }
         }
@@ -245,5 +246,9 @@
       border-radius: 50%;
     }
   }
+  
+  .accordion-panel {
+  }
+  
 }
 
