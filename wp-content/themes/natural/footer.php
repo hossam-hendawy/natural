@@ -243,5 +243,7 @@ $copyright_notice = get_field('copyright_notice', 'options');
     </div>
   </div>
 </footer>
+</div>
+</div>
 </body>
 </html>

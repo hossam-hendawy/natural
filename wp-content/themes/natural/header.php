@@ -47,7 +47,7 @@ $linkedin_url = get_field('linkedin_url', 'options');
         <path d="M179.866 42.3982V69.0332C179.068 68.1018 177.438 66.0776 175.42 62.9667C172.772 58.884 168.897 52.0382 165.47 42.6L165.395 42.3982H156.746V78.0616H163.694V53.8451C167.208 62.9574 172.803 71.2841 179.913 77.9778L180.003 78.0616H186.818V42.3982H179.869H179.866Z" fill="#96F56D"/>
         <path d="M385.864 42.3982V69.0332C385.066 68.1018 383.436 66.0776 381.418 62.9667C378.77 58.884 374.895 52.0382 371.468 42.6L371.393 42.3982H362.744V78.0616H369.692V53.8451C373.206 62.9574 378.801 71.2841 385.911 77.9778L386.001 78.0616H392.816V42.3982H385.867H385.864Z" fill="#96F56D"/>
       </svg>
-    
+
     </a>
     <!-- burger menu and cross-->
     <div role="button" aria-label="Open Menu Links" class="burger-menu hide-only-lg">
@@ -96,7 +96,7 @@ $linkedin_url = get_field('linkedin_url', 'options');
           </div>
           <?php if (have_rows('bottom_links', 'options')) { ?>
             <div class="bottom-links">
-              
+
               <?php while (have_rows('bottom_links', 'options')) {
                 the_row();
                 $link = get_sub_field('link');
@@ -138,4 +138,7 @@ $linkedin_url = get_field('linkedin_url', 'options');
     </nav>
   </div>
 </header>
+<div id="smooth-wrapper">
+  <div id="smooth-content">
+
 

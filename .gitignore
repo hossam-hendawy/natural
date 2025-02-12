@@ -51,3 +51,4 @@ wp-content/themes/natural/front-end/package-lock.json
 
 wp-content/themes/natural/front-end/yarn-error.log
 wp-content/themes/natural/front-end/yarn.lock
+/wp-content/themes/natural/front-end/.parcel-cache/

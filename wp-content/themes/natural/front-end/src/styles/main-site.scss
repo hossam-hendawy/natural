@@ -6,6 +6,14 @@ html, body {
   overflow-x: hidden;
 }
 
+body{
+  opacity: 0;
+  transition: opacity $duration;
+  &.loaded{
+    opacity: 1;
+  }
+}
+
 section {
   position: relative;
 }

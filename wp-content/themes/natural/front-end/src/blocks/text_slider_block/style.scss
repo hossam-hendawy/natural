@@ -2,6 +2,8 @@
 
 .text_slider_block {
   padding-block: 17px 20px;
+  background: $off-white-color;
+  margin-bottom: -1px;
   @include min-medium-screen {
     padding-top: 20px;
   }
