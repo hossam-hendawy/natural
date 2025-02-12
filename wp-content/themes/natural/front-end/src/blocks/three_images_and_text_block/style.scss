@@ -3,6 +3,7 @@
 .three_images_and_text_block {
   position: relative;
   z-index: 2;
+  overflow-x: hidden;
   background: $off-white-color;
   padding-block: 20px 20px;
   @include min-medium-screen {
@@ -45,9 +46,8 @@
   }
   
   .cards-wrapper {
-    display: flex;
-    flex-direction: column;
     @include media-screen-768 {
+      display: flex;
       padding-block: 52px 0;
       justify-content: space-between;
       flex-direction: row;
@@ -142,8 +142,9 @@
       }
     }
     
-    
-    .image-cards {
+    .swiper-images {
+      width: 100vw;
+      padding-right: 20px;
       @include media-screen-768 {
         display: none;
       }

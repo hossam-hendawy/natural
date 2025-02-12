@@ -8,7 +8,7 @@ export function three_images_and_text_block() {
   if (!block) return;
   
   
-  const swiper = new Swiper(block.querySelector('.image-cards'), {
+  const swiper = new Swiper(block.querySelector('.swiper-images'), {
     slidesPerView: 'auto',
     spaceBetween: 20,
     loop: true,
