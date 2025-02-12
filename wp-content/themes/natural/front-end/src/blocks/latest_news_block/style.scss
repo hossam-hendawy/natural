@@ -57,6 +57,10 @@
     
     .post-title {
       margin-block: 20px 22px;
+      transition: color $duration;
+      &:hover{
+        color: $lime;
+      }
     }
     
     .location {
