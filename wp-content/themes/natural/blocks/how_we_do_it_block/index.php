@@ -26,8 +26,6 @@ $label = get_field('label');
 $main_title = get_field('title');
 $description = get_field('description');
 $cta_button = get_field('cta_button');
-
-
 ?>
 <section id="<?= esc_attr($id) ?>" class="<?= esc_attr($className) ?>">
   <div class="container">
@@ -50,19 +48,13 @@ $cta_button = get_field('cta_button');
               <div id="panel<?php echo $index; ?>-title" class="accordion-title">
                 <button class="accordion-trigger medium" aria-expanded="<?php echo ($index == 1) ? 'true' : 'false'; ?>">
                     <span class="icon-and-title">
-                        <?= $icon['id'] ?>
-                      <?= \theme\Helpers::get_image($icon['id'], '1536x1536') ?>
-                   <picture class="logo">
-                    <?= \Theme\Helpers::display_attachment($icon['id'], array("width" => 250, "height" => 70)) ?>
-                  </picture>
-                      <?php if (!empty($icon) && is_array($icon)) { ?>
+                      <?php if ($icon) { ?>
                         <picture class="icon-wrapper">
-                          <img src="<?= $icon['url'] ?>" alt="<?= $icon['alt'] ?>">
-                      </picture>
+                           <?= \Theme\Helpers::display_attachment($icon, array("width" => 19, "height" => 22)) ?>
+                        </picture>
                       <?php } ?>
                       <?php echo esc_html($title); ?>
                     </span>
-                
                 </button>
               </div>
               <div class="accordion-content" role="region" aria-labelledby="panel<?php echo $index; ?>-title" aria-hidden="<?php echo ($index == 1) ? 'false' : 'true'; ?>">

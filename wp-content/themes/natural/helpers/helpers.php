@@ -66,11 +66,6 @@ class Helpers
   }
   
   
-  /**
-   * display_attachment
-   *
-   * @return string
-   */
   public static function display_attachment($attachment_id, $attachment_attributes = array())
   {
     if (!$attachment_id) {
@@ -93,22 +88,26 @@ class Helpers
     // Construct the image attributes string
     $img_attr = '';
     foreach ($attachment_attributes as $key => $value) {
-      $img_attr .= $key . '="' . $value . '" ';
+      $img_attr .= $key . '="' . esc_attr($value) . '" ';
     }
     
     $attachment_mime_type = get_post_mime_type($attachment_id);
     $attachment_url = wp_get_attachment_url($attachment_id);
     $attachment_alt = trim(strip_tags(get_post_meta($attachment_id, '_wp_attachment_image_alt', true))) ?: get_the_title($attachment_id);
     
-    // Construct the image tag for non-SVG images, include alt and other attributes
     if ($attachment_mime_type !== 'image/svg+xml') {
-      return '<img src="' . $attachment_url . '" alt="' . $attachment_alt . '" ' . $img_attr . '/>';
+      return '<img src="' . esc_url($attachment_url) . '" alt="' . esc_attr($attachment_alt) . '" ' . $img_attr . '/>';
     } else {
-      // For SVG, check if the file exists locally and return its content
-      $local_path = str_replace(home_url(), $_SERVER['DOCUMENT_ROOT'], $attachment_url);
+      // Handle SVG file path properly for localhost
+      $parsed_url = parse_url($attachment_url);
+      $local_path = rtrim($_SERVER['DOCUMENT_ROOT'], '/') . $parsed_url['path'];
       
-      return file_exists($local_path) ? file_get_contents($local_path) : null;
+      if (file_exists($local_path)) {
+        return file_get_contents($local_path);
+      } else {
+        return '<!-- SVG file not found: ' . esc_html($local_path) . ' -->';
+      }
     }
   }
-  
+
 }

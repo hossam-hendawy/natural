@@ -7,7 +7,6 @@
   }
   
   .content-wrapper {
-    
     @include large-screen {
       padding-inline: 180px 97px;
       padding-block: 60px;
@@ -15,7 +14,6 @@
     @include x-large-screen {
       padding-inline: 233px 97px;
     }
-    
     
     .label {
       margin-bottom: 23px;
@@ -146,6 +144,13 @@
           background-color: $spinach;
         }
         
+        .icon-wrapper {
+          svg {
+            path {
+              fill: $off-white-color;
+            }
+          }
+        }
         .accordion-title span {
           @include min-medium-screen {
             color: $off-white-color;
@@ -235,20 +240,6 @@
         transition: transform $duration;
       }
     }
-    
-    .svg-border {
-      width: 24px;
-      height: 24px;
-      border: 2px solid deepskyblue;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: 50%;
-    }
   }
-  
-  .accordion-panel {
-  }
-  
 }
 
