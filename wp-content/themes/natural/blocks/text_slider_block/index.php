@@ -21,16 +21,16 @@ if (isset($block)) {
 }
 ?>
 <section id="<?= esc_attr($id) ?>" class="<?= esc_attr($className) ?>">
-  <div class="container">
     <?php if (have_rows('core_values')) { ?>
-      <div class="swiper text-slider">
-        <div class="swiper-wrapper">
+      <!-- Use custom classes to avoid conflicts -->
+      <div class="text-slider">
+        <div class="text-slider-wrapper">
           <?php while (have_rows('core_values')) {
             the_row();
             $text = get_sub_field('text');
             ?>
             <?php if ($text): ?>
-              <div class="swiper-slide">
+              <div class="text-slider-slide">
                 <div class="text-wrapper natural-h5 fw-400 capitalize-text">
                   <?= $text ?>
                   <svg aria-hidden="true" width="21" height="16" viewBox="0 0 21 16" fill="none">
@@ -44,5 +44,4 @@ if (isset($block)) {
         </div>
       </div>
     <?php } ?>
-  </div>
 </section>

@@ -3,7 +3,8 @@
 .what_we_offer_block {
   background-color: $spinach;
   @include x-large-screen {
-    background-color: transparent;
+    background-color: $off-white-color;
+    margin-top: -1px;
   }
   
   .content-wrapper {

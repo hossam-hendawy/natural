@@ -9,7 +9,8 @@ export function home_here_block() {
   const logo = document.querySelector('.main-logo');
   const navbar = document.querySelector('.navbar');
   const burgerMenu = document.querySelector('.burger-menu');
-  const video = homeHero.querySelector('.media-wrapper');
+  const video = homeHero.querySelector('.media-wrapper video');
+  const videoWrapper = homeHero.querySelector('.media-wrapper ');
   const content = homeHero.querySelector('.content-wrapper');  // Select the content wrapper for text
 
   if (!homeHero || !logo || !navbar || !video || !content) return;
@@ -20,7 +21,8 @@ export function home_here_block() {
       start: 'top top',
       end: 'bottom bottom',
       scrub: true,
-      pinSpacing: false,
+      pinSpacing: true,
+      pin: videoWrapper
     }
   });
 
@@ -44,7 +46,9 @@ export function home_here_block() {
 
   // Scale the video to full size
   tl.to(video, {
-    scale: 1,
+    height: '100vh',
+    width: '100%',
+    top:0,
     duration: 3,
   }, 0);
 
@@ -54,12 +58,12 @@ export function home_here_block() {
   // );
 
   // Pin the video until the entire hero section scrolls out of view
-  ScrollTrigger.create({
-    trigger: homeHero,
-    start: 'top top',
-    end: 'bottom top',
-    pin: video,
-    pinSpacing: false,
-    scrub: true,
-  });
+  // ScrollTrigger.create({
+  //   trigger: homeHero,
+  //   start: 'top top',
+  //   end: 'bottom top',
+  //   pin: video,
+  //   pinSpacing: true,
+  //   scrub: true,
+  // });
 }

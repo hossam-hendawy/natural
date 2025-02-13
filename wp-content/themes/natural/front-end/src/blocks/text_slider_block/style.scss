@@ -4,26 +4,47 @@
   padding-block: 17px 20px;
   background: $off-white-color;
   margin-bottom: -1px;
+
   @include min-medium-screen {
     padding-top: 20px;
   }
-  
-  .container{
+
+  .container {
     padding-inline: 0;
   }
-  .swiper-slide {
-    width: fit-content !important;
+
+  /* Slider container */
+  .text-slider {
+    overflow: hidden; /* Hide overflowing slides */
+    position: relative;
+    display: flex;
   }
-  
+
+  /* Wrapper holds the slides */
+  .text-slider-wrapper {
+    display: flex;
+    will-change: transform;
+    flex-shrink: 0;
+    position: relative;
+  }
+
+  /* Each slide */
+  .text-slider-slide {
+    width: fit-content !important;
+    margin-right: 55px;
+  }
+
   .text-wrapper {
     display: flex;
     align-items: center;
     gap: 18px;
     line-height: 100%;
+
     @include media-screen-768 {
       gap: 40px;
     }
-    @include min-media-screen-992{
+
+    @include min-media-screen-992 {
       gap: 55px;
     }
   }

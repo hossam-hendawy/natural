@@ -86,12 +86,12 @@
           font-size: 16px;
           font-style: normal;
           font-weight: 400;
-          line-height: 127.778%;
+          line-height: 100%;
           transition: color $duration;
           @include min-medium-screen {
             font-size: 18px;
             font-weight: 500;
-            line-height: 133.333%;
+            line-height: 100%;
           }
         }
       }
@@ -165,6 +165,10 @@
               transform: scaleY(0);
             }
           }
+        }
+
+        .icon-wrapper{
+          filter: brightness(10);
         }
       }
     }

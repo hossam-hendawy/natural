@@ -55,7 +55,7 @@ $cta_button = get_field('cta_button');
                 'picture_class' => $picture_class,
             ],
             [
-                'data-speed' => 1.3
+                'data-speed' => 1.2
             ]
         );
         ?>
