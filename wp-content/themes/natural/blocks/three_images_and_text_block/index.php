@@ -99,7 +99,7 @@ $cta_button = get_field('cta_button');
         );
         ?>
       </div>
-      <div class="swiper image-cards">
+      <div class="swiper swiper-images">
         <div class="swiper-wrapper">
           <div class="swiper-slide">
             <?php
