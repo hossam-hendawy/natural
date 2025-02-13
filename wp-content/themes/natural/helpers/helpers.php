@@ -66,4 +66,49 @@ class Helpers
   }
   
   
+  /**
+   * display_attachment
+   *
+   * @return string
+   */
+  public static function display_attachment($attachment_id, $attachment_attributes = array())
+  {
+    if (!$attachment_id) {
+      return false;
+    }
+    
+    // If width and height are not provided, get them from the attachment
+    if (!isset($attachment_attributes['width']) && !isset($attachment_attributes['height'])) {
+      $image_attributes = wp_get_attachment_image_src($attachment_id, 'full');
+      if ($image_attributes) {
+        $attachment_attributes['width'] = $image_attributes[1];
+        $attachment_attributes['height'] = $image_attributes[2];
+      } else {
+        // Default dimensions or error handling
+        $attachment_attributes['width'] = 300; // Default width
+        $attachment_attributes['height'] = 300; // Default height
+      }
+    }
+    
+    // Construct the image attributes string
+    $img_attr = '';
+    foreach ($attachment_attributes as $key => $value) {
+      $img_attr .= $key . '="' . $value . '" ';
+    }
+    
+    $attachment_mime_type = get_post_mime_type($attachment_id);
+    $attachment_url = wp_get_attachment_url($attachment_id);
+    $attachment_alt = trim(strip_tags(get_post_meta($attachment_id, '_wp_attachment_image_alt', true))) ?: get_the_title($attachment_id);
+    
+    // Construct the image tag for non-SVG images, include alt and other attributes
+    if ($attachment_mime_type !== 'image/svg+xml') {
+      return '<img src="' . $attachment_url . '" alt="' . $attachment_alt . '" ' . $img_attr . '/>';
+    } else {
+      // For SVG, check if the file exists locally and return its content
+      $local_path = str_replace(home_url(), $_SERVER['DOCUMENT_ROOT'], $attachment_url);
+      
+      return file_exists($local_path) ? file_get_contents($local_path) : null;
+    }
+  }
+  
 }

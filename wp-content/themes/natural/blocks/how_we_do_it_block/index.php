@@ -50,10 +50,11 @@ $cta_button = get_field('cta_button');
               <div id="panel<?php echo $index; ?>-title" class="accordion-title">
                 <button class="accordion-trigger medium" aria-expanded="<?php echo ($index == 1) ? 'true' : 'false'; ?>">
                     <span class="icon-and-title">
-                          <?= \theme\Helpers::get_image(113, '1536x1536') ?>
-                      <?php
-                      
-                      ?>
+                        <?= $icon['id'] ?>
+                      <?= \theme\Helpers::get_image($icon['id'], '1536x1536') ?>
+                   <picture class="logo">
+                    <?= \Theme\Helpers::display_attachment($icon['id'], array("width" => 250, "height" => 70)) ?>
+                  </picture>
                       <?php if (!empty($icon) && is_array($icon)) { ?>
                         <picture class="icon-wrapper">
                           <img src="<?= $icon['url'] ?>" alt="<?= $icon['alt'] ?>">
