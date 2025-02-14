@@ -1,6 +1,8 @@
 <?php
 $id = '';
 $className = 'text_slider_block';
+$slider_speed = get_field('slider_speed')?:10000;
+
 if (isset($block)) {
   $id = $block['id'];
   if (!empty($block['anchor'])) {
@@ -23,7 +25,7 @@ if (isset($block)) {
 <section id="<?= esc_attr($id) ?>" class="<?= esc_attr($className) ?>">
     <?php if (have_rows('core_values')) { ?>
       <!-- Use custom classes to avoid conflicts -->
-      <div class="text-slider">
+      <div class="text-slider" data-slider-speed="<?= esc_attr($slider_speed); ?>">
         <div class="text-slider-wrapper">
           <?php while (have_rows('core_values')) {
             the_row();

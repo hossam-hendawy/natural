@@ -47,6 +47,29 @@
                     "parent_repeater": "field_67a74e4e962d1"
                 }
             ]
+        },
+        {
+            "key": "field_67af06a9d2dbb",
+            "label": "Slider Speed",
+            "name": "slider_speed",
+            "aria-label": "",
+            "type": "number",
+            "instructions": "Add it in milliseconds, where 1000 milliseconds equal 1 second.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 2000,
+            "min": "",
+            "max": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "step": "",
+            "prepend": "",
+            "append": ""
         }
     ],
     "location": [
@@ -67,5 +90,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1739020623
+    "modified": 1739523963
 }

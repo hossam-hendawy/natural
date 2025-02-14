@@ -35,14 +35,14 @@ export function home_here_block() {
 
     tl.to(logo, {
       scale: 0.7,
-      duration: 3,
+      duration: 2,
       transformOrigin: 'top left',
     }, 0);
 
     tl.to(logo, {
       y: "-120%",
       duration: 2,
-    }, 3);
+    }, 2);
 
     tl.to([navbar, burgerMenu], {
       opacity: 0,
@@ -53,6 +53,7 @@ export function home_here_block() {
       height: '100vh',
       width: '100%',
       top: 0,
+      borderRadius:0,
       duration: 2,
     }, 0);
   }
