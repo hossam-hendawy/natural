@@ -1,6 +1,10 @@
 import './styles/index.scss';
 import {indexBlocks} from './blocks/index-blocks';
 import {initializeScrollSmoother} from "./scripts/scrollSmoother";
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
 
 
 window.addEventListener('load', async function () {

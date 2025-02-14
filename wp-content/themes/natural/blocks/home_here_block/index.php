@@ -55,8 +55,9 @@ $video = get_field('video');
             ?>
         </div>
     <?php } ?>
-    <div class="container">
-        <div class="content-wrapper">
+
+    <div class="content-wrapper">
+        <div class="container">
             <svg class="corner trc" width="7" height="7" viewBox="0 0 7 7" fill="none">
                 <path opacity="0.5" d="M0.212232 1C3.40657 1 5.99609 3.58952 5.99609 6.78386" stroke="#FFFDE7"
                       stroke-width="0.827039"/>
